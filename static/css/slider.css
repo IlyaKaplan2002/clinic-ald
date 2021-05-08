@@ -177,7 +177,15 @@ summary {
   overflow: hidden;
   margin-left: 15%;
   margin-right: 15%;
-  /* width: 6em; */
+}
+
+@media screen and (max-width: 480px) {
+  .sleekslider {
+    width: 70%;
+    height: 700px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 .sleekslider .slide {
