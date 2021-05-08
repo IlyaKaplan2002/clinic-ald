@@ -170,13 +170,13 @@ summary {
 /************************/
 
 .sleekslider {
-  width: 70%;
+  width: 76%;
   height: 700px;
   position: relative;
   display: block;
   overflow: hidden;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 12%;
+  margin-right: 12%;
 }
 
 @media all and (orientation: portrait) {
