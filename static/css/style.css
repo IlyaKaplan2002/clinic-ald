@@ -408,6 +408,17 @@ li.menu__item.menu__item--current {
 .navbar-collapse {
   padding: 0 !important;
 }
+.service {
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+}
+@media all and (orientation: portrait) {
+  .service {
+    font-size: 10px;
+    font-weight: 10px;
+  }
+}
 .header-top {
   padding: 0.5em 0 0.8em 0;
 }
