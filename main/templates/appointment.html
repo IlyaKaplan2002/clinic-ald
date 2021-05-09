@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Записаться{% endblock %}
+{% block content %}
+
+	<form method="post">
+		{{ form.as_p }}
+		<input type="submit" name="done" value="Done">
+		{% csrf_token %}
+	</form>
+
+	{% if data %}{{data}}{% endif %}
+{% endblock %}

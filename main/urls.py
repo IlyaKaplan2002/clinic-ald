@@ -10,4 +10,5 @@ urlpatterns = [
 	path('single/', SingleView.as_view(), name="single"),
 	path('gallery/', GalleryView.as_view(), name="galley"),
 	path('typography/', TypographyView.as_view(), name="typography"),
+	path('appointment/', AppointmentView.as_view(), name="appointment")
 ]
