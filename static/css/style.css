@@ -408,13 +408,17 @@ li.menu__item.menu__item--current {
 .navbar-collapse {
   padding: 0 !important;
 }
-.service {
+table.services td {
   color: white;
   font-size: 25px;
   font-weight: bolder;
+  padding-bottom: 50px;
+}
+.service {
+  padding-right: 50px;
 }
 @media all and (orientation: portrait) {
-  .service {
+  table.services td {
     font-size: 15px;
     font-weight: 10px;
   }
