@@ -75,10 +75,10 @@ span.glyphicon.glyphicon-map-marker {
 .social-icons i {
   width: 36px;
   height: 36px;
-  background: #3b5999 url("../images/img-sprite.png") no-repeat 0px 0px;
+  /* background: #3b5999 url("../images/img-sprite.png") no-repeat 0px 0px; */
   display: inline-block;
 }
-.social-icons a i:hover {
+/* .social-icons a i:hover {
   border-radius: 50%;
   -o-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -89,7 +89,7 @@ span.glyphicon.glyphicon-map-marker {
   -o-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -ms-transition: 0.5s all;
-}
+} */
 .social-icons ul li {
   display: inline-block;
   margin-right: 3px;
@@ -3549,7 +3549,7 @@ a i.square-3 {
     width: 32px;
     height: 32px;
   }
-  a i.facebook {
+  /* a i.facebook {
     background: url("../images/facebook.png") no-repeat 4px -28px;
   }
   a i.instagram {
@@ -3563,7 +3563,7 @@ a i.square-3 {
   }
   a i.whatsapp {
     background: url("../images/whatsapp.png") no-repeat 5px -93px;
-  }
+  } */
   .social-icons ul li {
     display: inline-block;
     margin-right: -1px;
