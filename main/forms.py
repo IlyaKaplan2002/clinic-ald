@@ -6,3 +6,7 @@ class AppointmentForm(forms.Form):
 	destination = forms.ChoiceField(choices=(('prm', 'Первичное'), ('sec', 'Вторичное')), widget=forms.RadioSelect)
 	phone = forms.CharField(max_length="11")
 	action = forms.ChoiceField(choices=(('1', 'first'), ('2', 'second')), widget=forms.Select)
+
+class CommentForm(forms.ModelForm):
+	class Meta:
+		fields = ("name", "content")
