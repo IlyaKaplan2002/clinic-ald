@@ -409,6 +409,7 @@ li.menu__item.menu__item--current {
   padding: 0 !important;
 }
 .service {
+  background-color: peru;
   color: white;
   font-size: 25px;
   font-weight: bolder;
@@ -417,6 +418,7 @@ li.menu__item.menu__item--current {
   .service {
     font-size: 15px;
     font-weight: 10px;
+    background-color: red;
   }
 }
 .header-top {
