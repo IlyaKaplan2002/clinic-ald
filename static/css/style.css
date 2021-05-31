@@ -237,6 +237,11 @@ p.location span {
   color: white;
 }
 
+.languages {
+  padding-left: 50px;
+  padding-bottom: 25px;
+}
+
 .menu__link {
   cursor: pointer;
   -webkit-user-select: none;
