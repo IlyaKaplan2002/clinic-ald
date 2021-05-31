@@ -233,6 +233,10 @@ p.location span {
   margin: 1em 0;
 }
 
+.language {
+  color: white;
+}
+
 .menu__link {
   cursor: pointer;
   -webkit-user-select: none;
@@ -242,6 +246,9 @@ p.location span {
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.list {
 }
 
 .menu__link:hover,

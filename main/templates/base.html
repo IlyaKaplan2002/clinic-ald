@@ -1,5 +1,8 @@
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
 
 <!--
 Author: W3layouts
@@ -41,22 +44,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--start-home-->
 
-{% get_current_language as LANGUAGE_CODE %}
-{% get_available_languages as LANGUAGES %}
-{% get_language_info_list for LANGUAGES as languages %}
-<div class="languages">
-    <p>{% trans "Language" %}:</p>
-    <ul class="languages">
-        {% for language in languages %}
-            <li>
-                <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
-                    {{ language.name_local }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
-
 <div class="main-header" id="house">
 			<div class="header-strip">
 			   <div class="container">
@@ -69,6 +56,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#"><img src="{% static 'images/telegram.png' %}"></a></li>	
 						<li><a href="#"><img src="{% static 'images/viber.png' %}"></a></li>	
 						<li><a href="#"><img src="{% static 'images/whatsapp.png' %}"></a></li>
+					
+					{% for language in languages %}
+					<li >
+						<a href="/{{ language.code }}/" class="language">
+							{{ language.name_local }}
+						</a>
+					</li>
+					{% endfor %}
+				
 					</ul>
 				</div>
 				<div class="clearfix"></div>
