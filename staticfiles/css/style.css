@@ -233,6 +233,15 @@ p.location span {
   margin: 1em 0;
 }
 
+.language {
+  color: white;
+}
+
+.languages {
+  padding-left: 50px;
+  padding-bottom: 25px;
+}
+
 .menu__link {
   cursor: pointer;
   -webkit-user-select: none;
@@ -3570,6 +3579,8 @@ a i.square-3 {
   .social-icons ul li {
     display: inline-block;
     margin-right: -1px;
+    width: 80px;
+    height: 80px;
   }
   p.phonenum {
     float: left;

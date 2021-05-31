@@ -3580,6 +3580,11 @@ a i.square-3 {
     display: inline-block;
     margin-right: -1px;
   }
+
+  .social-icons ul li img {
+    width: 100px;
+    height: 100px;
+  }
   p.phonenum {
     float: left;
     font-size: 0.85em;
