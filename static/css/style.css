@@ -242,6 +242,11 @@ p.location span {
   padding-bottom: 25px;
 }
 
+.art > ul > li,
+#art {
+  color: #1a1a1f;
+}
+
 .menu__link {
   cursor: pointer;
   -webkit-user-select: none;
@@ -472,10 +477,7 @@ table.services td {
   width: 100%;
 }
 .tab-info p {
-  line-height: 2.5em;
   margin-top: 1em;
-  font-size: 0.9em;
-  color: #777;
 }
 .nav-tabs > li > a:hover,
 .nav > li > a:focus {
@@ -2257,11 +2259,6 @@ a i.square-3 {
     margin: 0 1px;
     padding: 15px 44px;
   }
-  .tab-info p {
-    line-height: 2.5em;
-    margin-top: 0em;
-    font-size: 0.9em;
-  }
   .span_1_of_2 h4 {
     font-size: 1em;
   }
@@ -2389,11 +2386,6 @@ a i.square-3 {
   .nav-tabs > li > a {
     margin: 0 1px;
     padding: 15px 44px;
-  }
-  .tab-info p {
-    line-height: 2.5em;
-    margin-top: 0em;
-    font-size: 0.9em;
   }
   .item-info {
     padding-top: 64px;
@@ -2925,11 +2917,6 @@ a i.square-3 {
 @media (max-width: 640px) {
   .tab-content > .tab-pane {
     padding-top: 11px;
-  }
-  .tab-info p {
-    line-height: 1.9em;
-    margin-top: 0em;
-    font-size: 0.875em;
   }
   .navbar-toggle {
     position: relative;

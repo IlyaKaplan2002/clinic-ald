@@ -64,22 +64,6 @@
 			</div>
 
 			<!-- Navigation Arrows with Thumbnails -->
-			<nav class="nav-split">
-				<a class="prev" href="">
-					<span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-left" /></svg></span>
-					<div>
-						<h3>test</h3>
-						<img alt="Previous thumb"/>
-					</div>
-				</a>
-				<a class="next" href="">
-					<span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-right" /></svg></span>
-					<div>
-						<h3>test</h3>
-						<img alt="Next thumb"/>
-					</div>
-				</a>
-			</nav>
 
 			<!-- Pagination -->
 			<nav class="pagination">
@@ -141,8 +125,8 @@
 								<div class="col-md-5 col-sm-5 tab-image">
 									<img src="{% static 'images/4.jpg' %}" alt="Medicinal">
 								</div>
-								<div class="col-md-7 col-sm-7 tab-info">
-									<p>Артериальная гипертензия — это патологическое повышение давления выше показателя в 130-140/85-90 мм. рт. ст. Тревожные
+								<div class="col-md-7 col-sm-7 tab-info art">
+									<p id="art">Артериальная гипертензия — это патологическое повышение давления выше показателя в 130-140/85-90 мм. рт. ст. Тревожные
 									признаки, свидетельствующие о развитии гипертонического кризиса:
 									<ul class="list" type="disc">
 										<li>головная боль;</li>
@@ -207,28 +191,6 @@
 						<h3 class="tittle two">НАШИ <span>УСЛУГИ</span></h3>
 					</div>
 					<div class="medicinal-w3-grids one">
-						<!-- <div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-8 medicinal-w3-left">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
-							</div>
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon1"></a>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon2"></a>
-								</div>
-							</div>
-							<div class="col-md-8 medicinal-w3-left1">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
-							</div> -->
 							<table class="services">
 								<tr>
 								<td class="service"><span>&#10023;Первичный прием врача-кардиолога (с регистрацией и расшифровкой ЭКГ)</span></td>
@@ -264,237 +226,12 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="medicinal-w3-grids">
-						<!-- <div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-8 medicinal-w3-left">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
-							</div>
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon3"></a>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon4"></a>
-								</div>
-							</div>
-							<div class="col-md-8 medicinal-w3-left1">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
-							</div> -->
+						
 							<div class="clearfix"></div>
 						</div>
 						<div class="clearfix"></div>
 					</div>
-				<!-- </div>
-			</div> -->
-			<!--medicinal-->
-			<!-- <div class="grid_2" id="tender">
-   	 <div class="container">
-	       <div class="sub-hd">
-						<h3 class="tittle">SUCCESSFUL <span>STORIES</span></h3>
-					</div>
-   	  <div class="box_1 one">
-   	 	<div class="col-md-6">
-   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="single.html"><img src="{% static 'images/n1.jpg' %}" class="img-responsive" alt=""></a>
-				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
-				   </div>
- 				</div>
-				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
- 				</div>
-				<div class="clearfix"></div>
-		</div>
-   	 	<div class="col-md-6">
-   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="single.html"><img src="{% static 'images/n5.jpg' %}" class="img-responsive" alt=""></a>
-				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
-				   </div>
- 				</div>
-				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
- 				</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="clearfix"></div>
-   	  </div>
-   	  <div class="box_2">
-   	 	<div class="col-md-6">
-   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="single.html"><img src="{% static 'images/n3.jpg' %}" class="img-responsive" alt=""></a>
-				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
-				   </div>
- 				</div>
-				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
- 				</div>
-				<div class="clearfix"></div>
-		</div>
-   	 	<div class="col-md-6">
-   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="single.html"><img src="{% static 'images/n4.jpg' %}" class="img-responsive" alt=""></a>
-				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
-				   </div>
- 				</div>
-				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
- 				</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="clearfix"></div>
-   	  </div>
-   	 </div>
-   </div> -->
-		<!--//team-->
-			<!---news-->
-						<!-- <div class="review-slider">
-		<div class="sub-hd">
-						<h3 class="tittle">OUR LATEST <span>NEWS</span></h3>
-					</div>
-								 <ul id="flexiselDemo1">
-								<li>
-									<a href="single.html"><img src="{% static 'images/n1.jpg' %}" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>May 22</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								</li>
-								<li>
-									<a href="single.html"><img src="{% static 'images/n2.jpg' %}" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR</h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>May 28</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								</li>
-								<li>
-									<a href="single.html"><img src="{% static 'images/n3.jpg' %}" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR</h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>June 16</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="{% static 'images/n4.jpg' %}" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR</h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>July 24</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="{% static 'images/n1.jpg' %}" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>Aug 27</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="{% static 'images/n5.jpg' %}" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>Aug 25</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="{% static 'images/n6.jpg' %}" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>Aug 30</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-							</ul>
-							<script type="text/javascript">
-						$(window).load(function() {
-							
-						  $("#flexiselDemo1").flexisel({
-								visibleItems:4,
-								animationSpeed: 1000,
-								autoPlay: true,
-								autoPlaySpeed: 3000,    		
-								pauseOnHover: false,
-								enableResponsiveBreakpoints: true,
-								responsiveBreakpoints: { 
-									portrait: { 
-										changePoint:480,
-										visibleItems: 2
-									}, 
-									landscape: { 
-										changePoint:640,
-										visibleItems: 3
-									},
-									tablet: { 
-										changePoint:800,
-										visibleItems: 4
-									}
-								}
-							});
-							});
-						</script>
-						<script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>	
-				</div>		 -->
+				
    <!--//news-->
    <div class="timetable">
 		<div class="container">
@@ -518,67 +255,4 @@
 		</div>
 </div>
    <!--/reviews-->
-	<div id="review" class="testimonials-review">
-		<div class="container">
-		<div class="sub-hd">
-						<h3 class="tittle lost">WHAT PATIENTS ARE SAYING <span>ABOUT US</span></h3>
-					</div>
-				<div class="testimonials">
-				  <div class="monials">
-				      <!--//screen-gallery-->
-						<div class="sreen-gallery-cursual">
-							 <!-- required-js-files-->
-							<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
-							    <script src="{% static 'js/owl.carousel.js' %}"></script>
-							        <script>
-							    $(document).ready(function() {
-							      $("#owl-demo").owlCarousel({
-							        items : 1,
-							        lazyLoad : true,
-							        autoPlay : true,
-							        navigation : false,
-							        navigationText :  false,
-							        pagination : true,
-							      });
-							    });
-							    </script>
-								 <!--//required-js-files-->
-						       <div id="owl-demo" class="owl-carousel">
-					                   <div class="item-owl">
-
-                                            <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
-                                            <div class="client-info">
-                                                <img src="{% static 'images/t1.jpg' %}" alt=" " />
-
-                                                <h4>John Allen</h4>
-                                                <span>Lorem ipsum dolor</span>
-                                            </div>
-                                        </div><!-- /.item -->
-					                     <div class="item-owl">
-
-                                            <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
-                                            <div class="client-info">
-                                                <img src="{% static 'images/t2.jpg' %}" alt=" " />
-
-                                                <h4>John Doe</h4>
-                                                <span>Lorem ipsum dolor</span>
-                                            </div>
-                                        </div><!-- /.item -->
-					                      <div class="item-owl">
-										  <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
-                                            <div class="client-info">
-                                                <img src="{% static 'images/t3.jpg' %}" alt=" " />
-
-                                                <h4>John Leo</h4>
-                                                <span>Lorem ipsum dolor</span>
-                                            </div>
-                                        </div><!-- /.item -->
-				              </div>
-						<!--//screen-gallery-->
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>	
 	{% endblock %}
