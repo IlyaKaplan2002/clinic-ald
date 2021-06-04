@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, View
 from .forms import *
 # import requests
 from django.core.mail import send_mail
-import datetime
+# import datetime
 
 
 class HomeView(TemplateView):
@@ -57,7 +57,7 @@ class AppointmentView(View):
 		if form.is_valid():
 			context["data"] = form.cleaned_data["destination"]
 			context["message"] = "Успешная запись на прием"
-			subject = f"{form.cleaned_data['name']}, {datetime.datetime.now()}"
+			subject = f"{form.cleaned_data['name']}"
 			message = f'''
 			Форма: Прием
 			Ответ: {form.cleaned_data["destination"]}
