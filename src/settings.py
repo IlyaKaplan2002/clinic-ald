@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'kaplans-clinic.herokuapp.com', 'www.kaplan-cardiology.com.ua', 'kaplan-cardiology.com.ua']
 
+SITE_ID = 1
 
 # Application definition
 
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -111,6 +114,7 @@ LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('en', _('English')),
     ('ru', _('Russian')),
+    ('uk', _('Ukrainian')),
 )
 
 LOCALE_PATHS = (

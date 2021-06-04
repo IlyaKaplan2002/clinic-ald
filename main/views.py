@@ -20,14 +20,14 @@ class ContactsView(TemplateView):
 	def get(self, request):
 		return render(request, self.template_name)
 
-class SingleView(TemplateView):
-	template_name = "single.html"
+class InfoView(TemplateView):
+	template_name = "info.html"
 
 	def get(self, request):
 		return render(request, self.template_name)
 
-class GalleryView(TemplateView):
-	template_name = "gallery.html"
+class ServicesView(TemplateView):
+	template_name = "services.html"
 
 	def get(self, request):
 		return render(request, self.template_name)
