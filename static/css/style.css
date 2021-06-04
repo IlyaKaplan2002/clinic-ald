@@ -242,9 +242,9 @@ p.location span {
   padding-bottom: 25px;
 }
 
-.art > ul > li,
-#art {
-  color: #1a1a1f;
+div.art li,
+p#art {
+  color: blue; /*#1a1a1f*/
 }
 
 .menu__link {
