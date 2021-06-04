@@ -3,8 +3,8 @@
 {% block content %}
 
 	<form method="post">
-		<!-- {{ form.as_p }} -->
-		Name:{{ form.name }}
+		{{ form.as_p }}
+
 		<input type="submit" name="done" value="Done">
 		{% csrf_token %}
 	</form>

@@ -7,8 +7,8 @@ ACTIONS = (
 )
 
 DESTIONATIONS = (
-	('prm', 'Первичное'),
-	('sec', 'Вторичное')
+	('prm', 'Первичный'),
+	('sec', 'Повторный')
 )
 
 class AppointmentForm(forms.Form):

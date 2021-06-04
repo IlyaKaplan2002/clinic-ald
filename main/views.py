@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, View
 from .forms import *
-import requests
+# import requests
 from django.core.mail import send_mail
+import datetime
 
 
 class HomeView(TemplateView):
@@ -56,23 +57,38 @@ class AppointmentView(View):
 		if form.is_valid():
 			context["data"] = form.cleaned_data["destination"]
 			context["message"] = "Успешная запись на прием"
-			subject = form.cleaned_data["name"]
-			message = "тут будет инфа из формы"
+			subject = f"{form.cleaned_data['name']}, {datetime.datetime.now()}"
+			message = f'''
+			Форма: Прием
+			Ответ: {form.cleaned_data["destination"]}
+
+			Форма: Услуга
+			Ответ: {form.cleaned_data["action"]}
+
+			Форма: ФИО
+			Ответ: {form.cleaned_data["name"]}
+
+			Форма: Возраст
+			Ответ: {form.cleaned_data["age"]}
+
+			Форма: Телефон
+			Ответ: {form.cleaned_data["phone"]}
+			'''
 			send_from = "kaplan.cardiology.bot@gmail.com"
 			to = ["mikaelan.itsmart@gmail.com"]
 			send_mail(subject, message, send_from, to)
 			return render(request, self.template_name, context)
 		context["data"] = "error"
 		return render(request, self.template_name, context)
-
-	def send_message(self):
-		token = "ТУТ_ВАШ_ТОКЕН_КОТОРЫЙ_ВЫДАЛ_BotFather"
-		url = "https://api.telegram.org/bot"
-		channel_id = "@ИМЯ_КАНАЛА"
-		url += token
-		method = url + "/sendMessage"
-
-		r = requests.post(method, data={
-			"chat_id": channel_id,
-			"text": text,
-		})
+	#
+	# def send_message(self):
+	# 	token = "ТУТ_ВАШ_ТОКЕН_КОТОРЫЙ_ВЫДАЛ_BotFather"
+	# 	url = "https://api.telegram.org/bot"
+	# 	channel_id = "@ИМЯ_КАНАЛА"
+	# 	url += token
+	# 	method = url + "/sendMessage"
+	#
+	# 	r = requests.post(method, data={
+	# 		"chat_id": channel_id,
+	# 		"text": text,
+	# 	})
