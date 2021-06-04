@@ -3,10 +3,13 @@
 {% block content %}
 
 	<form method="post">
-		{{ form.as_p }}
+		<!-- {{ form.as_p }} -->
+		Name:{{ form.name }}
 		<input type="submit" name="done" value="Done">
 		{% csrf_token %}
 	</form>
 
-	{% if data %}{{data}}{% endif %}
+	{% if data %}{{data}}{% endif %}<br/>
+	{% if message %}{{message}}{% endif %}<br/>
+
 {% endblock %}

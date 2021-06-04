@@ -12,11 +12,11 @@ DESTIONATIONS = (
 )
 
 class AppointmentForm(forms.Form):
-	name = forms.CharField(max_length = 100)
-	age = forms.IntegerField(min_value=0)
-	destination = forms.ChoiceField(choices=DESTIONATIONS, widget=forms.RadioSelect)
-	phone = forms.CharField(max_length="11")
-	action = forms.ChoiceField(choices=ACTIONS, widget=forms.Select)
+	name = forms.CharField(max_length = 100, widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
+	age = forms.IntegerField(min_value=0, widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
+	destination = forms.ChoiceField(choices=DESTIONATIONS, widget=forms.RadioSelect(attrs={'class' : 'myfieldclass'}))
+	phone = forms.CharField(max_length="11", widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
+	action = forms.ChoiceField(choices=ACTIONS, widget=forms.Select(attrs={'class': 'myfieldclass'}))
 
 # class AppointmentForm(forms.ModelForm):
 # 	class Meta:
