@@ -439,6 +439,10 @@ table.services td {
     font-size: 15px;
     font-weight: 10px;
   }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
 }
 .header-top {
   padding: 0.5em 0 0.8em 0;
@@ -2259,6 +2263,10 @@ a i.square-3 {
     margin: 0 1px;
     padding: 15px 44px;
   }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   .span_1_of_2 h4 {
     font-size: 1em;
   }
@@ -2387,6 +2395,10 @@ a i.square-3 {
     margin: 0 1px;
     padding: 15px 44px;
   }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   .item-info {
     padding-top: 64px;
   }
@@ -2473,6 +2485,10 @@ a i.square-3 {
 @media (max-width: 991px) {
   .navbar-nav > li > a {
     font-size: 13px;
+  }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
   }
   .menu--francisco .menu__item {
     margin: 0 0 0 0.7em;
@@ -2632,6 +2648,10 @@ a i.square-3 {
   .leave input[type="submit"] {
     width: 17%;
   }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   .met-in {
     margin: 0 0 0 0em;
   }
@@ -2679,6 +2699,10 @@ a i.square-3 {
   .medicinal-w3-grid {
     margin-bottom: 2em;
   }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   h2.tittle {
     font-size: 1.7em;
   }
@@ -2713,6 +2737,10 @@ a i.square-3 {
 @media (max-width: 736px) {
   .logo h1 a {
     font-size: 1.5em;
+  }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
   }
   a.navbar-brand img {
     top: 21px;
@@ -2827,6 +2855,10 @@ a i.square-3 {
     left: 41%;
     background: url(../images/arrow.png) no-repeat 0px -2px;
   }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   .nav-tabs > li > a {
     margin: 0 1px;
     padding: 11px 14px;
@@ -2917,6 +2949,10 @@ a i.square-3 {
 @media (max-width: 640px) {
   .tab-content > .tab-pane {
     padding-top: 11px;
+  }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
   }
   .navbar-toggle {
     position: relative;
@@ -3069,8 +3105,16 @@ a i.square-3 {
   .con-text p a {
     font-size: 1.5em;
   }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
 }
 @media (max-width: 480px) {
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   .search {
     float: left;
     width: 52%;
@@ -3175,6 +3219,10 @@ a i.square-3 {
     float: left;
     width: 72%;
     margin-left: 3em;
+  }
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
   }
   .filtr-item {
     padding: 25px 70px 0 !important;
@@ -3287,6 +3335,10 @@ a i.square-3 {
   }
 }
 @media (max-width: 384px) {
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   p.sub-para {
     font-size: 0.875em;
   }
@@ -3432,6 +3484,10 @@ a i.square-3 {
   }
 }
 @media (max-width: 375px) {
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   .nbs-flexisel-nav-right {
     left: 35%;
     background: url(../images/arrow.png) no-repeat 0px -2px;
@@ -3531,6 +3587,10 @@ a i.square-3 {
   }
 }
 @media (max-width: 320px) {
+  .art > ul > li,
+  #art {
+    color: #1a1a1f;
+  }
   .contact-form textarea {
     resize: none;
     height: 120px;
