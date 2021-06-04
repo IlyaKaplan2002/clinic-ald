@@ -23,7 +23,7 @@ msgstr "Головна"
 
 #: main/templates/base.html:121
 msgid "appointment"
-msgstr "Записатись на прийом"
+msgstr "Записатися на прийом"
 
 #: main/templates/base.html:122
 msgid "services"
@@ -31,7 +31,7 @@ msgstr "Послуги"
 
 #: main/templates/base.html:123
 msgid "cinfo"
-msgstr "Инфо для кліенту"
+msgstr "Инфо для пацієнта"
 
 #: main/templates/base.html:124
 msgid "about"

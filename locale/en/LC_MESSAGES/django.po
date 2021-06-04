@@ -32,7 +32,7 @@ msgstr "Services"
 
 #: main/templates/base.html:123
 msgid "cinfo"
-msgstr "Info for client"
+msgstr "Info for patient"
 
 #: main/templates/base.html:124
 msgid "about"

@@ -34,7 +34,7 @@ msgstr "Услуги"
 
 #: main/templates/base.html:123
 msgid "cinfo"
-msgstr "Информация для клиента"
+msgstr "Инфо для пациента"
 
 #: main/templates/base.html:124
 msgid "about"
