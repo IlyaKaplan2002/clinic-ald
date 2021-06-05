@@ -75,7 +75,7 @@ class AppointmentView(View):
 			Ответ: {form.cleaned_data["phone"]}
 			'''
 			send_from = "kaplan.cardiology.bot@gmail.com"
-			to = ["mikaelan.itsmart@gmail.com"]
+			to = ["kaplan.cardio@gmail.com"]
 			send_mail(subject, message, send_from, to)
 			return render(request, self.template_name, context)
 		context["data"] = "error"
