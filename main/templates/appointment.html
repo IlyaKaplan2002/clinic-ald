@@ -4,7 +4,8 @@
 <div class="contact-top">
 	<div class="container">
 	<div class="contact-form">
-		<form method="post" class="left_form">
+		<form method="post">
+		<div class="left_form">
 			<div>
 				<span><label>ФИО:</label></span>
 				<span>{{ form.name }}</span>
@@ -17,8 +18,8 @@
 				<span><label>Контактный номер телефона:</label></span>
 				<span>{{ form.phone }}</span>
 			</div>
-		</form>
-		<form class="right_form">
+		</div>
+		<div class="right_form">
 			<div>
 				<span><label>Прием:</label></span>
 				<span>{{ form.destination }}</span>
@@ -30,8 +31,9 @@
 			<div>
 				<span><input type="submit" name="done" value="Отправить" class="myButton"></span>
 			</div>
+			{% csrf_token %}
+		</div>
 		</form>
-		<div class="clearfix">{% csrf_token %}</div>
 	</div>
 	</div>
 	</div>
