@@ -4,6 +4,7 @@
 <div class="contact-top">
 	<div class="container">
 	<div class="contact-form">
+		{% if form %}
 		<form method="post">
 		<div class="left_form">
 			<div>
@@ -34,6 +35,15 @@
 			{% csrf_token %}
 		</div>
 		</form>
+		{% else %}
+		<div class="top_banner two">
+			<div class="container">
+				<div class="sub-hd-inner">
+					<h3 class="tittle">Спасибо за Ваши ответы. Мы Вам перезвоним в течении получаса или в ближайшее рабочее время.</h3>
+				</div>
+			</div>
+		</div>
+		{% endif %}
 	</div>
 	</div>
 	</div>
