@@ -21,7 +21,14 @@ class AppointmentForm(forms.Form):
 	age = forms.IntegerField(label = _("age"), min_value=0, widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
 	destination = forms.ChoiceField(label = _("destination"), choices=DESTIONATIONS, widget=forms.RadioSelect(attrs={'class' : 'myfieldclass'}))
 	phone = forms.CharField(label = _("phone"), max_length="11", widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
-	action = forms.ChoiceField(label = _("action"), choices=ACTIONS, widget=forms.Select(attrs={'class': 'myfieldclass'}))
+	# action = forms.ChoiceField(label = _("action"), choices=ACTIONS, widget=forms.Select(attrs={'class': 'myfieldclass'}))
+
+	action1 = forms.BooleanField()
+	action2 = forms.BooleanField()
+	action3 = forms.BooleanField()
+	action4 = forms.BooleanField()
+	action5 = forms.BooleanField()
+	action6 = forms.BooleanField()
 
 # class AppointmentForm(forms.ModelForm):
 # 	class Meta:
