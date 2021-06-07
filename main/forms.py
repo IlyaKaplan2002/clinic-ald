@@ -1,12 +1,33 @@
 from django import forms
+from .models import *
+from django.utils.translation import ugettext_lazy as _
+
+ACTIONS = (
+	('Приём врача-кардиолога(с регистрацией и расшифровкой ЭКГ', 'Приём врача-кардиолога(с регистрацией и расшифровкой ЭКГ'),
+	('Консультация врача-кардиологана дому у пациента (с регистрацией и расшифровкой ЭКГ)', 'Консультация врача-кардиологана дому у пациента (с регистрацией и расшифровкой ЭКГ)'),
+	('Регистрация и расшифровка ЭКГ', 'Регистрация и расшифровка ЭКГ'),
+	('Регистрация и расшифровка ЭКГ с ритмограммой', 'Регистрация и расшифровка ЭКГ с ритмограммой'),
+	('Суточное (холтеровское) мониторирование ЭКГ', 'Суточное (холтеровское) мониторирование ЭКГ'),
+	('Суточное мониторирование артериального давления', 'Суточное мониторирование артериального давления'),
+)
+
+DESTIONATIONS = (
+	('Первичный', 'Первичный'),
+	('Повторный', 'Повторный')
+)
 
 class AppointmentForm(forms.Form):
-	name = forms.CharField(max_length = 100)
-	age = forms.IntegerField(min_value=0)
-	destination = forms.ChoiceField(choices=(('prm', 'Первичное'), ('sec', 'Вторичное')), widget=forms.RadioSelect)
-	phone = forms.CharField(max_length="11")
-	action = forms.ChoiceField(choices=(('1', 'first'), ('2', 'second')), widget=forms.Select)
+	name = forms.CharField(label = _("name"), max_length = 100, widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
+	age = forms.IntegerField(label = _("age"), min_value=0, widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
+	destination = forms.ChoiceField(label = _("destination"), choices=DESTIONATIONS, widget=forms.RadioSelect(attrs={'class' : 'myfieldclass'}))
+	phone = forms.CharField(label = _("phone"), max_length="11", widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
+	action = forms.ChoiceField(label = _("action"), choices=ACTIONS, widget=forms.Select(attrs={'class': 'myfieldclass'}))
 
-class CommentForm(forms.ModelForm):
-	class Meta:
-		fields = ("name", "content")
+# class AppointmentForm(forms.ModelForm):
+# 	class Meta:
+# 		model = Entry
+# 		fields = '__all__'
+# 		widgets = {
+# 			'destination' : forms.RadioSelect(),
+# 			'action' : forms.Select(),
+# 		}

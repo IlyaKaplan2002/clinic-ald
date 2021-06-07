@@ -1,12 +1,54 @@
 {% extends 'base.html' %}
 {% block title %}Записаться{% endblock %}
 {% block content %}
+<div class="contact-top">
+	<div class="container">
+	<div class="contact-form">
+		{% if form %}
+		<form method="post">
+		<div class="left_form">
+			<div>
+				<span><label>ФИО:</label></span>
+				<span>{{ form.name }}</span>
+			</div>
+			<div>
+				<span><label>Возраст:</label></span>
+				<span>{{ form.age }}</span>
+			</div>
+			<div>
+				<span><label>Контактный номер телефона:</label></span>
+				<span>{{ form.phone }}</span>
+			</div>
+		</div>
+		<div class="right_form">
+			<div>
+				<span><label>Прием:</label></span>
+				<span>{{ form.destination }}</span>
+			</div>
+			<div>
+				<span><label>Услуга:</label></span>
+				<span>{{ form.action }}</span>
+			</div>
+			<div>
+				<span><input type="submit" name="done" value="Отправить" class="myButton"></span>
+			</div>
+			{% csrf_token %}
+		</div>
+		</form>
+		{% else %}
+		<div class="top_banner two">
+			<div class="container">
+				<div class="sub-hd-inner">
+					<h3 class="tittle">Спасибо за Ваши ответы. Мы Вам перезвоним в течении получаса или в ближайшее рабочее время.</h3>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+	</div>
+	</div>
 
-	<form method="post">
-		{{ form.as_p }}
-		<input type="submit" name="done" value="Done">
-		{% csrf_token %}
-	</form>
+	{% if data %}{{data}}{% endif %}<br/>
+	{% if message %}{{message}}{% endif %}<br/>
 
-	{% if data %}{{data}}{% endif %}
 {% endblock %}

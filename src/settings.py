@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-q$w#^t30f11d8u!0^ulqn14z8@uxyk(3ty^@g@9c*d5-k08ho9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'kaplans-clinic.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'kaplans-clinic.herokuapp.com', 'www.kaplan-cardiology.com.ua', 'kaplan-cardiology.com.ua']
 
+# SITE_ID = 1
 
 # Application definition
 
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -111,6 +114,7 @@ LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('en', _('English')),
     ('ru', _('Russian')),
+    ('uk', _('Ukrainian')),
 )
 
 LOCALE_PATHS = (
@@ -128,6 +132,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'kaplan.cardiology.bot@gmail.com'
+EMAIL_HOST_PASSWORD = 'tnvicajumjrjebae'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 STATIC_URL = '/static/'
 

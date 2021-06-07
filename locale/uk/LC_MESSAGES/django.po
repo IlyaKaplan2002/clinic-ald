@@ -16,67 +16,59 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: main/forms.py:20
 msgid "name"
-msgstr "Имя"
+msgstr "Ім'я"
 
 #: main/forms.py:21
 msgid "age"
-msgstr "Возраст"
+msgstr "Вік"
 
 #: main/forms.py:22
 msgid "destination"
-msgstr "Прием"
+msgstr "Прийом"
 
 #: main/forms.py:23
 msgid "phone"
-msgstr "Номер телефона"
+msgstr "Номер телефону"
 
 #: main/forms.py:24
 msgid "action"
-msgstr "Услуга"
+msgstr "Послуга"
 
 #: main/templates/base.html:120
 msgid "main"
-msgstr "Главная"
+msgstr "Головна"
 
 #: main/templates/base.html:121
 msgid "appointment"
-msgstr "Записаться на прием"
+msgstr "Записатися на прийом"
 
 #: main/templates/base.html:122
 msgid "services"
-msgstr "Услуги"
+msgstr "Послуги"
 
 #: main/templates/base.html:123
 msgid "cinfo"
-msgstr "Инфо для пациента"
+msgstr "Инфо для пацієнта"
 
 #: main/templates/base.html:124
 msgid "about"
-msgstr "О нас"
+msgstr "Про нас"
 
 #: main/templates/base.html:125
 msgid "contacts"
-msgstr "Контакты"
+msgstr "Контакти"
 
 #: src/settings.py:115
 msgid "English"
-msgstr "Ангийский"
+msgstr "Англійська"
 
 #: src/settings.py:116
-#, fuzzy
-#| msgid "Russion"
 msgid "Russian"
-msgstr "Русский"
+msgstr "Російська"
 
 #: src/settings.py:117
 msgid "Ukrainian"
-msgstr "Украинский"
-
-#~ msgid "Language"
-#~ msgstr "Язык"
+msgstr "Українська"
