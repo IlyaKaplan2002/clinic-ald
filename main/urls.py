@@ -9,6 +9,5 @@ urlpatterns = [
 	path('contacts/', ContactsView.as_view(), name="contacts"),
 	path('info/', InfoView.as_view(), name="info"),
 	path('services/', ServicesView.as_view(), name="services"),
-	path('typography/', TypographyView.as_view(), name="typography"),
 	path('appointment/', AppointmentView.as_view(), name="appointment")
 ]

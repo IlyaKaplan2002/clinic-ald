@@ -16,12 +16,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>{% block title %}{% endblock %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
-<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />	
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="{% static 'css/slider.css' %}">
 <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
@@ -34,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
+				$(".scroll").click(function(event){
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
 				});
@@ -52,13 +52,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:kaplan.cardio@gmail.com">kaplan.cardio@gmail.com</a></p>
 				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><a style="color: white;" href="tel:+380678040363">+380 67 804 03 63</a></p>
 				<div class="social-icons">
-					<ul>					
+					<ul>
 						<li><a href="#"><img src="{% static 'images/facebook.png' %}"></a></li>
 						<li><a href="#"><img src="{% static 'images/instagram.png' %}"></a></li>
-						<li><a href="tg://resolve?domain=kaplan_cardio_bot"><img src="{% static 'images/telegram.png' %}"></a></li>	
-						<li><a href="viber://chat?number=%2B380678040363"><img src="{% static 'images/viber.png' %}"></a></li>	
+						<li><a href="tg://resolve?domain=kaplan_cardio_bot"><img src="{% static 'images/telegram.png' %}"></a></li>
+						<li><a href="viber://chat?number=%2B380678040363"><img src="{% static 'images/viber.png' %}"></a></li>
 						<li><a href="https://wa.me/380678040363"><img src="{% static 'images/whatsapp.png' %}"></a></li>
-					
+
 					{% for language in languages %}
 					<li class="languages" >
 						<a href="/{{ language.code }}/" class="language">
@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</li>
 					{% endfor %}
-				
+
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="section_room">
 					<select id="country" onchange="change_country(this.value)" class="frm-field required">
 						<option value="null">All Tests</option>
-						<option value="null">Blood Test</option>     
+						<option value="null">Blood Test</option>
 						<option value="AX">Urine Test </option>
 						<option value="AX">Blood Volume Test</option>
 						<option value="AX">Normal Test</option>
@@ -117,12 +117,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  <div class="top-menu">
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
-										<li class="menu__item menu__item--current"><a href="{% url 'main:home' %}" class="menu__link"><span class="menu__helper">{% translate "main" %}</span></a></li>
-										<li class="menu__item"><a href="{% url 'main:appointment' %}" class="menu__link"><span class="menu__helper">{% translate "appointment" %}</span></a></li>
-										<li class="menu__item"><a href="{% url 'main:services' %}" class="menu__link"><span class="menu__helper">{% translate "services" %}</span></a></li>
-										<!-- <li class="menu__item"><a href="{% url 'main:info' %}" class="menu__link"><span class="menu__helper">{% translate "cinfo" %}</span></a></li>
-										<li class="menu__item"><a href="{% url 'main:about' %}" class="menu__link"><span class="menu__helper">{% translate "about" %}</span></a></li> -->
-										<li class="menu__item"><a href="{% url 'main:contacts' %}" class="menu__link"><span class="menu__helper">{% translate "contacts" %}</span></a></li>
+										<li class="menu__item {% if pg_name == 'home' %}menu__item--current{% endif %}"><a href="{% url 'main:home' %}" class="menu__link"><span class="menu__helper">{% translate "main" %}</span></a></li>
+										<li class="menu__item {% if pg_name == 'appointment' %}menu__item--current{% endif %}"><a href="{% url 'main:appointment' %}" class="menu__link"><span class="menu__helper">{% translate "appointment" %}</span></a></li>
+										<li class="menu__item {% if pg_name == 'services' %}menu__item--current{% endif %}"><a href="{% url 'main:services' %}" class="menu__link"><span class="menu__helper">{% translate "services" %}</span></a></li>
+										<!-- <li class="menu__item {% if pg_name == 'info' %}menu__item--current{% endif %}"><a href="{% url 'main:info' %}" class="menu__link"><span class="menu__helper">{% translate "cinfo" %}</span></a></li>
+										<li class="menu__item {% if pg_name == 'about' %}menu__item--current{% endif %}"><a href="{% url 'main:about' %}" class="menu__link"><span class="menu__helper">{% translate "about" %}</span></a></li> -->
+										<li class="menu__item {% if pg_name == 'contacts' %}menu__item--current{% endif %}"><a href="{% url 'main:contacts' %}" class="menu__link"><span class="menu__helper">{% translate "contacts" %}</span></a></li>
 									</ul>
 								</nav>
 							</div>
@@ -198,7 +198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<a href="#"><img src="{% static 'images/t3.jpg' %}" alt=" " title="CEO" /></a>
 										</div>
 										<div class="clearfix"> </div>
-										
+
 										<div class="flickr-grid">
 											<a href="#"><img src="{% static 'images/t2.jpg' %}" alt=" " title="GM" /></a>
 										</div>
@@ -230,12 +230,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								  			containerID: 'toTop', // fading element id
 											containerHoverID: 'toTopHover', // fading element hover id
 											scrollSpeed: 1200,
-											easingType: 'linear' 
+											easingType: 'linear'
 								 		};
 										*/
-										
+
 										$().UItoTop({ easingType: 'easeOutQuart' });
-										
+
 									});
 								</script>
 								<!--end-smooth-scrolling-->
