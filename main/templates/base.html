@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+{% load main_tags %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_available_languages as LANGUAGES %}
 {% get_language_info_list for LANGUAGES as languages %}
@@ -61,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					{% for language in languages %}
 					<li class="languages" >
-						<a href="/{{ language.code }}/" class="language">
+						<a href="/{{ language.code }}/{% get_path request.path %}" class="language">
 							{{ language.name_local }}
 						</a>
 					</li>
