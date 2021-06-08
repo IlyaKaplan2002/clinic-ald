@@ -121,6 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li class="menu__item {% if pg_name == 'home' %}menu__item--current{% endif %}"><a href="{% url 'main:home' %}" class="menu__link"><span class="menu__helper">{% translate "main" %}</span></a></li>
 										<li class="menu__item {% if pg_name == 'appointment' %}menu__item--current{% endif %}"><a href="{% url 'main:appointment' %}" class="menu__link"><span class="menu__helper">{% translate "appointment" %}</span></a></li>
 										<li class="menu__item {% if pg_name == 'services' %}menu__item--current{% endif %}"><a href="{% url 'main:services' %}" class="menu__link"><span class="menu__helper">{% translate "services" %}</span></a></li>
+										<!-- Beta-version -->
 										<!-- <li class="menu__item {% if pg_name == 'info' %}menu__item--current{% endif %}"><a href="{% url 'main:info' %}" class="menu__link"><span class="menu__helper">{% translate "cinfo" %}</span></a></li>
 										<li class="menu__item {% if pg_name == 'about' %}menu__item--current{% endif %}"><a href="{% url 'main:about' %}" class="menu__link"><span class="menu__helper">{% translate "about" %}</span></a></li> -->
 										<li class="menu__item {% if pg_name == 'contacts' %}menu__item--current{% endif %}"><a href="{% url 'main:contacts' %}" class="menu__link"><span class="menu__helper">{% translate "contacts" %}</span></a></li>
@@ -143,72 +144,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="container">
 					<div class="footer-grids wow bounceIn animated" data-wow-delay="0.4s">
 						<div class="col-md-3 footer-grid">
-						<h4>About <span>Medicinal</span></h4>
+						<h4><span>О нас</span></h4>
 						<div class="border2"></div>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
-						  <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
+						  <p>Консультативный прием ведет врач-кардиолог высшей категории, доцент, кандидат медецинских наук, автор множества научных
+						работ по кардиологии, член Европейского общества кардиологов
+						Каплан Павел Александрович.
+						Опыт работы: 22 года</p>
 						</div>
 						<div class="col-md-3 footer-grid tags">
-								<h4>The <span>Tags</span></h4>
+								<h4> <span>Меню</span></h4>
 								<div class="border2"></div>
 							<ul class="tag">
-								<li><a href="#">Awesome</a></li>
-								<li><a href="#">Strategy</a></li>
-								<li><a href="#">Photography</a></li>
-								<li><a href="#">Development</a></li>
-								<li><a href="#">Css</a></li>
-								<li><a href="#">photoshop</a></li>
-								<li><a href="#">Html</a></li>
-								<li><a href="#">Awesome</a></li>
-								<li><a href="#">Strategy</a></li>
-								<li><a href="#">Photoshop</a></li>
-								<li><a href="#">Html</a></li>
+								<li><a href="{% url 'main:home' %}">{% translate "main" %}</a></li>
+								<li><a href="{% url 'main:appointment' %}">{% translate "appointment" %}</a></li>
+								<li><a href="{% url 'main:services' %}">{% translate "services" %}</a></li>
+								<!-- Beta-version -->
+								<!-- <li><a href="{% url 'main:info' %}">{% translate "cinfo" %}</a></li>
+								<li><a href="{% url 'main:about' %}">{% translate "about" %}</a></li> -->
+								<li><a href="{% url 'main:contacts' %}">{% translate "contacts" %}</a></li>
 							</ul>
 						</div>
 						<div class="col-md-3 footer-grid tweet">
-								<h4>Latest <span>Tweets</span></h4>
+								<h4> <span>Контакты</span></h4>
 								<div class="border2"></div>
-								<div class="icon-3-square">
-										<a href="#"><i class="square-3"></i></a>
-									</div>
+								
 							<div class="icon-text">
-								<p>I like this awesome freebie. Check it out By <a href="#"> Admin </a></p>
-								<h5>15 mins ago</h5>
+								<p><a href="mailto:kaplan.cardio@gmail.com"> kaplan.cardio@gmail.com</a></p>
+							
 							</div>
 								<div class="clearfix"></div>
-								<div class="icon-3-square">
-										<a href="#"><i class="square-3"></i></a>
-								</div>
+								
 								<div class="icon-text">
-								    <p>I like this awesome freebie. Check it out  By <a href="#"> Admin </a> </p>
-									<h5>15 mins ago</h5>
+								    <p><a href="tel:380678040363">+380 67 804 03 63</a> </p>
+									
+								</div>
+								<div class="clearfix"></div>
+								<div class="icon-text">
+									<p>г. Днепр, ул. Костомаровская 8 (здание спорткомпллекса "Динамо")</p>
+								
 								</div>
 								<div class="clearfix"></div>
 						</div>
 						<div class="col-md-3 footer-grid flickr">
-								<h4>Flickr <span>Feed </span></h4>
-								<div class="border2"></div>
+								
+								
 								<div class="flickr-grids">
-										<div class="flickr-grid">
-											<a href="#"><img src="{% static 'images/t1.jpg' %}" alt=" " title="CEO" /></a>
-										</div>
-										<div class="flickr-grid">
-											<a href="#"><img src="{% static 'images/t2.jpg' %}" alt=" " title="GM" /></a>
-										</div>
-										<div class="flickr-grid">
-											<a href="#"><img src="{% static 'images/t3.jpg' %}" alt=" " title="CEO" /></a>
-										</div>
-										<div class="clearfix"> </div>
-
-										<div class="flickr-grid">
-											<a href="#"><img src="{% static 'images/t2.jpg' %}" alt=" " title="GM" /></a>
-										</div>
-										<div class="flickr-grid">
-											<a href="#"><img src="{% static 'images/t3.jpg' %}" alt=" " title="CEO" /></a>
-										</div>
-										<div class="flickr-grid">
-											<a href="#"><img src="{% static 'images/t1.jpg' %}" alt=" " title="GM" /></a>
-										</div>
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5291.605822725337!2d35.03212947488026!3d48.46031094940272!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x76f026344fc8eab1!2z0JPQvtGC0LXQu9GMICLQlNC40L3QsNC80L4i!5e0!3m2!1sru!2sua!4v1622915849645!5m2!1sru!2sua"
+										width="285" height="285" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 								<div class="clearfix"> </div>
 							</div>
 						</div>

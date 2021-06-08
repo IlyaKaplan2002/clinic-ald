@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Записаться{% endblock %}
+{% block content %}
+<div class="contact-top">
+	<div class="container">
+	<div class="contact-form">
+		{% if form %}
+		<form method="post">
+			{{ form.as_p }}
+			{% csrf_token %}
+		</form>
+		{% else %}
+		<div class="top_banner two">
+			<div class="container">
+				<div class="sub-hd-inner">
+					<h3 class="tittle">Спасибо за Ваши ответы. Мы Вам перезвоним в течении получаса или в ближайшее рабочее время.</h3>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+	</div>
+	</div>
+
+	{% if data %}{{data}}{% endif %}<br/>
+	{% if message %}{{message}}{% endif %}<br/>
+
+{% endblock %}
+
