@@ -34,12 +34,13 @@ class AppointmentForm(forms.Form):
     action = forms.ChoiceField(label=_(
         "action"), choices=ACTIONS, widget=forms.Select(attrs={'class': 'myfieldclass'}))
 
-    action1 = forms.BooleanField()
-    action2 = forms.BooleanField()
-    action3 = forms.BooleanField()
-    action4 = forms.BooleanField()
-    action5 = forms.BooleanField()
-    action6 = forms.BooleanField()
+    action1 = forms.BooleanField(required=False)
+    action2 = forms.BooleanField(required=False)
+    action3 = forms.BooleanField(required=False)
+    action4 = forms.BooleanField(required=False)
+    action5 = forms.BooleanField(required=False)
+    action6 = forms.BooleanField(required=False)
+    action7 = forms.BooleanField(required=False)
 
 # class AppointmentForm(forms.ModelForm):
 # 	class Meta:

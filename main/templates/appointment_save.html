@@ -8,6 +8,7 @@
 		<form method="post">
 			{{ form.as_p }}
 			{% csrf_token %}
+			<span><input type="submit" name="done" value="Отправить" class="myButton"></span>
 		</form>
 		{% else %}
 		<div class="top_banner two">
@@ -26,4 +27,3 @@
 	{% if message %}{{message}}{% endif %}<br/>
 
 {% endblock %}
-

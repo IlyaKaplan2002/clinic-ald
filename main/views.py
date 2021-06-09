@@ -48,6 +48,15 @@ class ServicesView(TemplateView):
 
 class AppointmentView(View):
 	template_name = "appointment.html"
+	ACTIONS = (
+	    'Приём врача-кардиолога(с регистрацией и расшифровкой ЭКГ)',
+	    'Консультация врача-кардиолога на дому у пациента (с регистрацией и расшифровкой ЭКГ)',
+	    'Регистрация и расшифровка ЭКГ', 'Регистрация и расшифровка ЭКГ',
+	    'Регистрация и расшифровка ЭКГ с ритмограммой',
+	    'Суточное (холтеровское) мониторирование ЭКГ',
+	    'Суточное мониторирование артериального давления',
+	    'Суточное мониторирование артериального давления',
+	)
 
 	def get(self, request):
 		context = {}
@@ -64,24 +73,34 @@ class AppointmentView(View):
 			context["data"] = form.cleaned_data["destination"]
 			context["message"] = "Успешная запись на прием"
 			subject = f"{form.cleaned_data['name']}"
+			message_additional = '''
+Форма: услуги\n
+'''
+			counter = 1
+			for i in range(1, len(self.ACTIONS)):
+				if form.cleaned_data[f"action{i}"]:
+					message_additional += f"{counter}) {self.ACTIONS[i - 1]}\n"
+					counter += 1
 			message = f'''
-			Форма: Прием
-			Ответ: {form.cleaned_data["destination"]}
+Форма: Прием
+Ответ: {form.cleaned_data["destination"]}
 
-			Форма: Услуга
-			Ответ: {form.cleaned_data["action"]}
+Форма: Услуга
+Ответ: {form.cleaned_data["action"]}
 
-			Форма: ФИО
-			Ответ: {form.cleaned_data["name"]}
+Форма: ФИО
+Ответ: {form.cleaned_data["name"]}
 
-			Форма: Возраст
-			Ответ: {form.cleaned_data["age"]}
+Форма: Возраст
+Ответ: {form.cleaned_data["age"]}
 
-			Форма: Телефон
-			Ответ: {form.cleaned_data["phone"]}
-			'''
+Форма: Телефон
+Ответ: {form.cleaned_data["phone"]}
+'''
+			message += message_additional
 			send_from = "kaplan.cardiology.bot@gmail.com"
 			to = ["kaplan.cardio@gmail.com"]
+			# to = ["mikaelan.itsmart@gmail.com"]
 			send_mail(subject, message, send_from, to)
 			return render(request, self.template_name, context)
 		context["data"] = "error"
