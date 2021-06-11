@@ -100,8 +100,8 @@ class AppointmentView(View):
 '''
 			message += message_additional
 			send_from = settings.EMAIL_HOST_USER
-			# to = ["kaplan.cardio@gmail.com"]
-			to = ["mikaelan.itsmart@gmail.com"]
+			to = ["kaplan.cardio@gmail.com"]
+			# to = ["mikaelan.itsmart@gmail.com"]
 			send_mail(subject, message, send_from, to)
 			return render(request, self.template_name, context)
 		context["data"] = "error"
