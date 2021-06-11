@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q$w#^t30f11d8u!0^ulqn14z8@uxyk(3ty^@g@9c*d5-k08ho9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'kaplans-clinic.herokuapp.com', 'www.kaplan-cardiology.com.ua', 'kaplan-cardiology.com.ua']
 
