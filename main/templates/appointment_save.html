@@ -6,9 +6,38 @@
 	<div class="contact-form">
 		{% if form %}
 		<form method="post">
-			{{ form.as_p }}
+		<div class="left_form">
+			<div>
+				<span><label>ФИО:</label></span>
+				<span>{{ form.name }}</span>
+			</div>
+			<div>
+				<span><label>Возраст:</label></span>
+				<span>{{ form.age }}</span>
+			</div>
+			<div>
+				<span><label>Контактный номер телефона:</label></span>
+				<span>{{ form.phone }}</span>
+			</div>
+		</div>
+		<div class="right_form">
+			<div>
+				<span><label>Прием:</label></span>
+				<span>{{ form.destination }}</span>
+			</div>
+			<div>
+				<p>{{ form.action1 }} {{ form.action1.label }}</p>
+				<p>{{ form.action2 }} {{ form.action2.label }}</p>
+				<p>{{ form.action3 }} {{ form.action3.label }}</p>
+				<p>{{ form.action4 }} {{ form.action4.label }}</p>
+				<p>{{ form.action5 }} {{ form.action5.label }}</p>
+				<p>{{ form.action6 }} {{ form.action6.label }}</p>
+			</div>
+			<div>
+				<span><input type="submit" name="done" value="Отправить" class="myButton"></span>
+			</div>
 			{% csrf_token %}
-			<span><input type="submit" name="done" value="Отправить" class="myButton"></span>
+		</div>
 		</form>
 		{% else %}
 		<div class="top_banner two">

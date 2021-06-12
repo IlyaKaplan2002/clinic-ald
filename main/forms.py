@@ -32,15 +32,14 @@ class AppointmentForm(forms.Form):
     phone = forms.CharField(label=_("phone"), max_length="11",
                             widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
     action = forms.ChoiceField(label=_(
-        "action"), choices=ACTIONS, widget=forms.Select(attrs={'class': 'myfieldclass'}))
+        "action"), required=False, choices=ACTIONS, widget=forms.Select(attrs={'class': 'myfieldclass'}))
 
-    action1 = forms.BooleanField(required=False)
-    action2 = forms.BooleanField(required=False)
-    action3 = forms.BooleanField(required=False)
-    action4 = forms.BooleanField(required=False)
-    action5 = forms.BooleanField(required=False)
-    action6 = forms.BooleanField(required=False)
-    action7 = forms.BooleanField(required=False)
+    action1 = forms.BooleanField(label = "Приём врача-кардиолога (с регистрацией и расшифровкой ЭКГ)", required=False)
+    action2 = forms.BooleanField(label = "Консультация врача-кардиолога на дому у пациента (с регистрацией и расшифровкой ЭКГ)", required=False)
+    action3 = forms.BooleanField(label = "Регистрация и расшифровка ЭКГ", required=False)
+    action4 = forms.BooleanField(label = "Регистрация и расшифровка ЭКГ с ритмограммой", required=False)
+    action5 = forms.BooleanField(label = "Суточное (холтеровское) мониторирование ЭКГ", required=False)
+    action6 = forms.BooleanField(label = "Суточное мониторирование артериального давления", required=False)
 
 # class AppointmentForm(forms.ModelForm):
 # 	class Meta:
