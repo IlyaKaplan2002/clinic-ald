@@ -436,13 +436,25 @@ table.services td {
   font-weight: bolder;
   padding-bottom: 50px;
 }
-.service {
+.service-link {
+  color: white;
+}
+.service-link:hover {
+  color: red;
+}
+.cece {
   padding-right: 50px;
 }
 @media all and (orientation: portrait) {
   table.services td {
     font-size: 15px;
     font-weight: 10px;
+  }
+  .service-link {
+    color: white;
+  }
+  .service-link:hover {
+    color: red;
   }
   .art > ul > li,
   #art {
