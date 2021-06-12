@@ -18,6 +18,11 @@ body {
   font-size: 100%;
   background: #ffffff;
 }
+
+.action-form {
+  margin-bottom: 20px;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -244,7 +249,7 @@ p.location span {
 
 div.art li,
 p#art {
-  color: #1a1a1f
+  color: #1a1a1f;
 }
 
 .menu__link {
