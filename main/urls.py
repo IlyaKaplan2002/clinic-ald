@@ -9,5 +9,6 @@ urlpatterns = [
 	path('contacts/', ContactsView.as_view(), name="contacts"),
 	path('info/', InfoView.as_view(), name="info"),
 	path('services/', ServicesView.as_view(), name="services"),
-	path('appointment/', AppointmentView.as_view(), name="appointment")
+	path('appointment/', AppointmentView.as_view(), name="appointment"),
+	path('redirect/<int:id>/', LinkCheckboxView.as_view(), name="linkcheckbox"),
 ]

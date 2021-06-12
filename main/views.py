@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, View
 from .forms import *
 # import requests
@@ -47,6 +47,12 @@ class ServicesView(TemplateView):
 		context["pg_name"] = "services"
 		return render(request, self.template_name, context)
 
+class LinkCheckboxView(View):
+
+	def get(self, request, id):
+		request.session["checkbox_id"] = id
+		return redirect("main:appointment")
+
 class AppointmentView(View):
 	template_name = "appointment.html"
 	ACTIONS = (
@@ -63,6 +69,8 @@ class AppointmentView(View):
 		context["pg_name"] = "appointment"
 		form = AppointmentForm()
 		context['form'] = form
+		# context["message"] = request.session["checkbox_id"]
+		context["checkbox_id"] = request.session.get("checkbox_id", 0)
 		return render(request, self.template_name, context)
 
 	def post(self, request):
@@ -70,7 +78,6 @@ class AppointmentView(View):
 		context["pg_name"] = "appointment"
 		form = AppointmentForm(request.POST)
 		if form.is_valid():
-			context["data"] = form.cleaned_data["destination"]
 			context["message"] = "Успешная запись на прием"
 			subject = f"{form.cleaned_data['name']}"
 			message_additional = '''

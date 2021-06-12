@@ -2,6 +2,10 @@
 {% load static %}
 {% block title %}Записаться{% endblock %}
 {% block content %}
+
+<script type="text/javascript">
+	var action = {{ checkbox_id }};
+</script>
 <script type="text/javascript" src="{% static 'js/checkbox.js' %}"></script>
 <div class="contact-top">
 	<div class="container">
@@ -54,8 +58,6 @@
 	</div>
 	</div>
 	</div>
-
-	{% if data %}{{data}}{% endif %}<br/>
-	{% if message %}{{message}}{% endif %}<br/>
+{{message}}<br/>
 
 {% endblock %}
