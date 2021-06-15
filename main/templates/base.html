@@ -32,6 +32,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <!-- site icon -->
 <link rel="shortcut icon" href="{% static 'images/logo.jpg' %}" type="image/jpg">
+<!-- translation -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="{% static 'js/google-translate.js' %}"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -62,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					{% for language in languages %}
 					<li class="languages" >
-						<a href="/{{ language.code }}/{% get_path request.path %}" class="language">
+						<a href="/{{ language.code }}/{% get_path request.path %}" data-google-lang="{{ language.code }}" class="language">
 							{{ language.name_local }}
 						</a>
 					</li>
