@@ -70,7 +70,9 @@ class AppointmentView(View):
 		form = AppointmentForm()
 		context['form'] = form
 		# context["message"] = request.session["checkbox_id"]
-		context["checkbox_id"] = request.session.get("checkbox_id", 0)
+		request.session["checkbox_id"] = request.session.get("checkbox_id", 0)
+		context["checkbox_id"] = request.session["checkbox_id"]
+		request.session["checkbox_id"] = 0
 		return render(request, self.template_name, context)
 
 	def post(self, request):
