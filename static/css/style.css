@@ -1,4 +1,4 @@
-/*--A Design by W3layouts 
+/*--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -3739,5 +3739,17 @@ a i.square-3 {
   .table > tfoot > tr > td {
     border-top: none !important;
     padding: 0 5px !important;
+  }
+}
+
+iframe.map-frame {
+  width: 1140px;
+  height: 500px;
+}
+
+@media (max-width: 600px) {
+  iframe.map-frame {
+    width: 290px;
+    height: 400px;
   }
 }
