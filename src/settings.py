@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'kaplans-clinic.herokuapp.com', 'www.kaplan-cardiology.com.ua', 'kaplan-cardiology.com.ua']
 
-# SITE_ID = 1
+SITE_ID = 1
 
 # Application definition
 
