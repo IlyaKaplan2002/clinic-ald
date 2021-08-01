@@ -1,60 +1,93 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 {% block title %}Услуги{% endblock %}
+
+{% block imports %}
+        <link rel="stylesheet" href="{% static 'css/services.css' %}" />
+{% endblock %}
+
 {% block content %}
-<div class="top_banner two">
-    <div class="container">
-        <div class="sub-hd-inner">
-            <h3 class="tittle">Наши <span>услуги</span></h3>
+    <main>
+      <section class="section services">
+        <div class="container">
+          <div class="service-wrapper">
+            <h1 class="section-title">Наши услуги</h1>
+
+            <div class="prices">
+              <!-- Adaptive -->
+              <ul class="services-list-adaptive">
+                <li class="services-item main-text">
+                  Первичный приём врача-кардиолога (с регистрацией и
+                  расшифровкой ЭКГ)<br />
+                  590 грн
+                </li>
+                <li class="services-item main-text">
+                  Повторный приём врача-кардиолога(с регистрацией и расшифровкой
+                  ЭКГ)<br />
+                  540 грн
+                </li>
+                <li class="services-item main-text">
+                  Консультация врача-кардиолога на дому у пациента (с
+                  регистрацией и расшифровкой ЭКГ)<br />
+                  990 грн
+                </li>
+                <li class="services-item main-text">
+                  Регистрация и расшифровка ЭКГ<br />
+                  210 грн
+                </li>
+                <li class="services-item main-text">
+                  Регистрация и расшифровка ЭКГ с ритмограммой<br />
+                  290 грн
+                </li>
+                <li class="services-item main-text">
+                  Суточное (холтеровское) мониторирование ЭКГ<br />
+                  550 грн
+                </li>
+                <li class="services-item main-text">
+                  Суточное мониторирование артериального давления<br />
+                  450 грн
+                </li>
+              </ul>
+
+              <ul class="services-list">
+                <li class="services-item main-text">
+                  Первичный приём врача-кардиолога (с регистрацией и
+                  расшифровкой ЭКГ)
+                </li>
+                <li class="services-item main-text">
+                  Повторный приём врача-кардиолога(с регистрацией и расшифровкой
+                  ЭКГ)
+                </li>
+                <li class="services-item main-text">
+                  Консультация врача-кардиолога на дому у пациента (с
+                  регистрацией и расшифровкой ЭКГ)
+                </li>
+                <li class="services-item main-text">
+                  Регистрация и расшифровка ЭКГ
+                </li>
+                <li class="services-item main-text">
+                  Регистрация и расшифровка ЭКГ с ритмограммой
+                </li>
+                <li class="services-item main-text">
+                  Суточное (холтеровское) мониторирование ЭКГ
+                </li>
+                <li class="services-item main-text">
+                  Суточное мониторирование артериального давления
+                </li>
+              </ul>
+
+              <ul class="prices-list">
+                <li class="services-item main-text">590 грн</li>
+                <li class="services-item main-text">540 грн</li>
+                <li class="services-item main-text">990 грн</li>
+                <li class="services-item main-text">220 грн</li>
+                <li class="services-item main-text">290 грн</li>
+                <li class="services-item main-text">550 грн</li>
+                <li class="services-item main-text">450 грн</li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-
-
-<div class="medicinal-w3">
-    <div class="container">
-        <div class="medicinal-w3-grids one">
-            <table class="services">
-                <tr>
-                    <td class="service"><span><a href="{% url 'main:linkcheckbox' id=1 %}" class="service-link">&#10023;Первичный прием врача-кардиолога (с регистрацией и расшифровкой
-                            ЭКГ)</a></span></td>
-                    <td class="price"><span>590грн</span></td>
-                </tr>
-                <tr>
-                    <td class="service"><span><a href="{% url 'main:linkcheckbox' id=2 %}" class="service-link">&#10023;Повторный прием врача-кардиолога (с регистрацией и расшифровкой
-                            ЭКГ)</a></span></td>
-                    <td><span>540грн</span></td>
-                </tr>
-                <tr>
-                    <td class="service"><span><a href="{% url 'main:linkcheckbox' id=3 %}" class="service-link">&#10023;Консультация врача-кардиолога на дому у пациента (с регистрацией и
-                            расшифровкой ЭКГ)</a></span></td>
-                    <td><span>990грн</span></td>
-                </tr>
-                <tr>
-                    <td class="service"><span><a href="{% url 'main:linkcheckbox' id=4 %}" class="service-link">&#10023;Регистрация и расшифровка ЭКГ</a></span></td>
-                    <td><span>220грн</span></td>
-                </tr>
-                <tr>
-                    <td class="service"><span><a href="{% url 'main:linkcheckbox' id=5 %}" class="service-link">&#10023;Регистрация и расшифровка ЭКГ с ритмограммой</a></span></td>
-                    <td><span>290грн</span></td>
-                </tr>
-                <tr>
-                    <td class="service"><span><a href="{% url 'main:linkcheckbox' id=6 %}" class="service-link">&#10023;Суточное(холтеровское) мониторирование ЭКГ</a></span></td>
-                    <td><span>550грн</span></td>
-                </tr>
-                <tr>
-                    <td class="service"><span><a href="{% url 'main:linkcheckbox' id=7 %}" class="service-link">&#10023;Суточное мониторирование артериального давления</a></span></td>
-                    <td><span>450грн</span></td>
-                </tr>
-            </table>
-            <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="medicinal-w3-grids">
-
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-</div>
+      </section>
+    </main>
 {% endblock %}

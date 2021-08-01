@@ -1,0 +1,14 @@
+.services .service-wrapper {
+  border: 1px solid var(--main-text-color);
+  padding: 20px 46.5px;
+}
+
+.services-item {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+}

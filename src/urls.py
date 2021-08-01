@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.conf.urls.i18n import i18n_patterns
 from django.contrib.sitemaps.views import sitemap
 from main.sitemaps import MySitemap
 
@@ -25,10 +24,10 @@ sitemaps = {
     'objs': MySitemap,
 }
 
-urlpatterns = i18n_patterns(
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace="main")),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-)
+]
 
 urlpatterns += staticfiles_urlpatterns()

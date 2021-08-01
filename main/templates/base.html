@@ -1,233 +1,351 @@
-{% load static %}
-{% load i18n %}
-{% load main_tags %}
-{% get_current_language as LANGUAGE_CODE %}
-{% get_available_languages as LANGUAGES %}
-{% get_language_info_list for LANGUAGES as languages %}
+{% load static %} {% load main_tags %}
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>{% block title %}{% endblock %}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="Каплан кардиолог кардиология клиника" content="Кардиологический кабинет Каплана" />
-<script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
-<link rel="stylesheet" href="{% static 'css/slider.css' %}">
-<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
-<!--/web-font-->
-<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-<!-- site icon -->
-<link rel="shortcut icon" href="{% static 'images/logo.jpg' %}" type="image/jpg">
-<!-- translation -->
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-<script src="{% static 'js/google-translate.js' %}"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
-<!--/script-->
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			});
-</script>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/Logo.png' %}"
+      type="image/x-icon"
+    />
+    <script src="{% static 'js/adaptive-menu.js' %}"></script>
 
-</head>
-<body>
-<!--start-home-->
+    {% block imports %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/adaptive.css' %}" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container page-header-cont">
+        <nav class="header-nav">
+          <a href="{% url 'main:home' %}">
+            <svg class="header-logo">
+              <use href="{% static 'img/icons.svg' %}#logo"></use>
+            </svg>
+          </a>
 
-<div class="main-header" id="house">
-			<div class="header-strip">
-			   <div class="container">
-				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:kaplan.cardio@gmail.com">kaplan.cardio@gmail.com</a></p>
-				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><a style="color: white;" href="tel:+380678040363">+380 67 804 03 63</a></p>
-				<div class="social-icons">
-					<ul>
-						<li><a href="#"><img src="{% static 'images/facebook.png' %}"></a></li>
-						<li><a href="#"><img src="{% static 'images/instagram.png' %}"></a></li>
-						<li><a href="tg://resolve?domain=kaplan_cardio_bot"><img src="{% static 'images/telegram.png' %}"></a></li>
-						<li><a href="viber://chat?number=%2B380678040363"><img src="{% static 'images/viber.png' %}"></a></li>
-						<li><a href="https://wa.me/380678040363"><img src="{% static 'images/whatsapp.png' %}"></a></li>
+          <!-- Adaptive -->
+          <!-- Adaptive with icon -->
+          <ul class="topnav nav-list-adaptive" id="myTopnav">
+            <li class="nav-list-item">
+              <a href="{% url 'main:home' %}">Главная</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="{% url 'main:services' %}">Услуги</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="{% url 'main:info' %}">Информация</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="{% url 'main:contacts' %}">Контакты</a>
+            </li>
+            <li>
+              <a class="icon" onclick="myFunction()">
+                <svg width="32" height="32">
+                  <use href="{% static 'img/icons.svg' %}#menu"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
 
-					{% for language in languages %}
-					<li class="languages" >
-						<a href="/{{ language.code }}/{% get_path request.path %}" data-google-lang="{{ language.code }}" class="language">
-							{{ language.name_local }}
-						</a>
-					</li>
-					{% endfor %}
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="{% url 'main:home' %}">Главная</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="{% url 'main:services' %}">Услуги</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="{% url 'main:info' %}">Информация</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="{% url 'main:contacts' %}">Контакты</a>
+            </li>
+          </ul>
+        </nav>
 
-					</ul>
-				</div>
-				<div class="clearfix"></div>
+        <ul class="contacts-list">
+          <li class="contacts-list-item">
+            <a href="tel:380678040363">
+              <svg>
+                <use href="{% static 'img/icons.svg' %}#phone"></use>
+              </svg>
+              +380 67 804 03 63</a
+            >
+          </li>
+
+          <li class="contacts-list-item">
+            <a href="mailto:kaplan.cardio@gmail.com">
+              <svg>
+                <use href="{% static 'img/icons.svg' %}#email"></use>
+              </svg>
+              kaplan.cardio@gmail.com</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    {% block content %} {% endblock %}
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-modal" data-modal-close>
+          <svg class="close-icon">
+            <use href="{% static '/img/icons.svg' %}#close"></use>
+          </svg>
+        </button>
+
+        <!-- <form method="post">
+		<div class="left_form">
+			<div>
+				<span><label>ФИО:</label></span>
+				<span><input type="text" name="name" class="myfieldclass" maxlength="100" required id="id_name"></span>
 			</div>
+			<div>
+				<span><label>Возраст:</label></span>
+				<span><input type="text" name="age" class="myfieldclass" required id="id_age"></span>
 			</div>
-			<!-- <div class="header-middle">
-			  <div class="header-search">
-			   <form action="#" method="post">
-				<div class="search">
-					<input type="search" value="Search" name="search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All Tests</option>
-						<option value="null">Blood Test</option>
-						<option value="AX">Urine Test </option>
-						<option value="AX">Blood Volume Test</option>
-						<option value="AX">Normal Test</option>
-						<option value="AX">Body Scanning</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>
-	</div> -->
-		<!--header-top-->
-			<div class="header-top">
-			  <div class="container">
-					 <nav class="navbar navbar-default">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					  </button>
-						<div class="logo">
-							<h1><a  href="{% url 'main:home' %}"><img src="{% static 'images/logo.jpg' %}" alt=" " /></a></h1>
-						</div>
-					</div>
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-						  <div class="top-menu">
-							<nav class="menu menu--francisco">
-									<ul class="nav navbar-nav menu__list">
-										<li class="menu__item {% if pg_name == 'home' %}menu__item--current{% endif %}"><a href="{% url 'main:home' %}" class="menu__link"><span class="menu__helper">{% translate "main" %}</span></a></li>
-										<li class="menu__item {% if pg_name == 'appointment' %}menu__item--current{% endif %}"><a href="{% url 'main:appointment' %}" class="menu__link"><span class="menu__helper">{% translate "appointment" %}</span></a></li>
-										<li class="menu__item {% if pg_name == 'services' %}menu__item--current{% endif %}"><a href="{% url 'main:services' %}" class="menu__link"><span class="menu__helper">{% translate "services" %}</span></a></li>
-										<!-- Beta-version -->
-										<!-- <li class="menu__item {% if pg_name == 'info' %}menu__item--current{% endif %}"><a href="{% url 'main:info' %}" class="menu__link"><span class="menu__helper">{% translate "cinfo" %}</span></a></li>
-										<li class="menu__item {% if pg_name == 'about' %}menu__item--current{% endif %}"><a href="{% url 'main:about' %}" class="menu__link"><span class="menu__helper">{% translate "about" %}</span></a></li> -->
-										<li class="menu__item {% if pg_name == 'contacts' %}menu__item--current{% endif %}"><a href="{% url 'main:contacts' %}" class="menu__link"><span class="menu__helper">{% translate "contacts" %}</span></a></li>
-									</ul>
-								</nav>
-							</div>
-					</div>
-					<!-- /.navbar-collapse -->
-				</nav>
-
-				<div class="clearfix"></div>
-			</div>
-	</div>
-
-
-	{% block content %}
-	{% endblock %}
-
-	<div class="footer-section">
-				<div class="container">
-					<div class="footer-grids wow bounceIn animated" data-wow-delay="0.4s">
-						<div class="col-md-3 footer-grid">
-						<h4><span>О нас</span></h4>
-						<div class="border2"></div>
-						  <p>Консультативный прием ведет врач-кардиолог высшей категории, доцент, кандидат медецинских наук, автор множества научных
-						работ по кардиологии, член Европейского общества кардиологов
-						Каплан Павел Александрович.
-						Опыт работы: 22 года</p>
-						</div>
-						<div class="col-md-3 footer-grid tags">
-								<h4> <span>Меню</span></h4>
-								<div class="border2"></div>
-							<ul class="tag">
-								<li><a href="{% url 'main:home' %}">{% translate "main" %}</a></li>
-								<li><a href="{% url 'main:appointment' %}">{% translate "appointment" %}</a></li>
-								<li><a href="{% url 'main:services' %}">{% translate "services" %}</a></li>
-								<!-- Beta-version -->
-								<!-- <li><a href="{% url 'main:info' %}">{% translate "cinfo" %}</a></li>
-								<li><a href="{% url 'main:about' %}">{% translate "about" %}</a></li> -->
-								<li><a href="{% url 'main:contacts' %}">{% translate "contacts" %}</a></li>
-							</ul>
-						</div>
-						<div class="col-md-3 footer-grid tweet">
-								<h4> <span>Контакты</span></h4>
-								<div class="border2"></div>
-
-							<div class="icon-text">
-								<p><a href="mailto:kaplan.cardio@gmail.com"> kaplan.cardio@gmail.com</a></p>
-
-							</div>
-								<div class="clearfix"></div>
-
-								<div class="icon-text">
-								    <p><a href="tel:380678040363">+380 67 804 03 63</a> </p>
-
-								</div>
-								<div class="clearfix"></div>
-								<div class="icon-text">
-									<p>г. Днепр, ул. Костомаровская 8 (здание спорткомпллекса "Динамо")</p>
-
-								</div>
-								<div class="clearfix"></div>
-						</div>
-						<div class="col-md-3 footer-grid flickr">
-
-
-								<div class="flickr-grids">
-									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.8336407424326!2d35.0339169156203!3d48.45972137925047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe34b14c1a193%3A0x151dd496c2b33ba0!2sKardyolohyya%20Kaplana!5e0!3m2!1sru!2sua!4v1626458463573!5m2!1sru!2sua"
-										width="285" height="285" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
+			<div>
+				<span><label>Контактный номер телефона:</label></span>
+				<span><input type="text" name="phone" class="myfieldclass" maxlength="11" required id="id_phone"></span>
 			</div>
 		</div>
-	<!--//end-footer-section-->
-	<!--//footer-->
-	<div class="footer-bottom">
-		<div class="container">
-			<p>© 2016 Medicinal. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+		<div class="right_form">
+			<div>
+				<span><label>Прием:</label></span>
+				<span><ul id="id_destination" class="myfieldclass">
+    <li><label for="id_destination_0"><input type="radio" name="destination" value="Первичный" class="myfieldclass" required id="id_destination_0">
+ Первичный</label>
+
+</li>
+    <li><label for="id_destination_1"><input type="radio" name="destination" value="Повторный" class="myfieldclass" required id="id_destination_1">
+ Повторный</label>
+
+</li>
+</ul></span>
+			</div>
+			<div>
+				<span><label>Выберите услугу/услуги:</label></span>
+				<p class="action-form"><input type="checkbox" name="action1" id="id_action1"> <span name="action1">Приём врача-кардиолога (с регистрацией и расшифровкой ЭКГ)</span></p>
+				<p class="action-form"><input type="checkbox" name="action2" id="id_action2"> <span name="action2">Консультация врача-кардиолога на дому у пациента (с регистрацией и расшифровкой ЭКГ)</span></p>
+				<p class="action-form"><input type="checkbox" name="action3" id="id_action3"> <span name="action3">Регистрация и расшифровка ЭКГ</span></p>
+				<p class="action-form"><input type="checkbox" name="action4" id="id_action4"> <span name="action4">Регистрация и расшифровка ЭКГ с ритмограммой</span></p>
+				<p class="action-form"><input type="checkbox" name="action5" id="id_action5"> <span name="action5">Суточное (холтеровское) мониторирование ЭКГ</span></p>
+				<p class="action-form"><input type="checkbox" name="action6" id="id_action6"> <span name="action6">Суточное мониторирование артериального давления</span></p>
+			</div>
+			<div>
+				<span><input type="submit" name="done" value="Отправить" class="myButton"></span>
+			</div>
+			<input type="hidden" name="csrfmiddlewaretoken" value="KTPvhmICjH2vLp8oe9xshtC8APR5oxmMlU6o1O7SDZUCummfi5j2sVnu0Fkht2Xt">
 		</div>
-	</div>
-		<!--start-smooth-scrolling-->
-						<script type="text/javascript">
-									$(document).ready(function() {
-										/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear'
-								 		};
-										*/
+		</form> -->
 
-										$().UItoTop({ easingType: 'easeOutQuart' });
+        <h2>Записаться на приём:</h2>
 
-									});
-								</script>
-								<!--end-smooth-scrolling-->
-		<a href="#house" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	<script src="{% static 'js/bootstrap.js' %}"></script>
+        <form action="{% url 'main:appointment_checkout' %}" method="post">
+          {% csrf_token %}
+          <ul>
+            <li>
+              <p class="main-text">ФИО:</p>
+              <input type="text" name="name" required id="id_name" />
+            </li>
+            <li>
+              <p class="main-text">Возраст:</p>
+              <input type="text" name="age" required id="id_age" />
+            </li>
+            <li>
+              <p class="main-text">Телефон:</p>
+              <input type="text" name="phone" required id="id_phone" />
+            </li>
 
-</body>
+            <!-- Adaptive -->
+            <li class="submit-adaptive"><input type="submit" /></li>
+          </ul>
+
+          <ul id="id_destination">
+            <li class="appointment-input">
+              <p class="main-text">Приём:</p>
+              <label>
+                <input
+                  type="radio"
+                  name="destination"
+                  value="Первичный"
+                  id="id_destination_0"
+                />
+                Первичный </label
+              ><br />
+              <label>
+                <input
+                  type="radio"
+                  name="destination"
+                  value="Повторный"
+                  id="id_destination_1"
+                />
+                Вторичный
+              </label>
+            </li>
+            <li class="services-input">
+              <p class="main-text">Услуга/услуги:</p>
+              <label
+                ><input type="checkbox" name="action1" id="id_action1" />ПРИЁМ
+                ВРАЧА-КАРДИОЛОГА (С РЕГИСТРАЦИЕЙ И РАСШИФРОВКОЙ ЭКГ)</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="action2"
+                  id="id_action2"
+                />КОНСУЛЬТАЦИЯ ВРАЧА-КАРДИОЛОГА НА ДОМУ У ПАЦИЕНТА (С
+                РЕГИСТРАЦИЕЙ И РАСШИФРОВКОЙ ЭКГ)</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="action3"
+                  id="id_action3"
+                />РЕГИСТРАЦИЯ И РАСШИФРОВКА ЭКГ</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="action4"
+                  id="id_action4"
+                />РЕГИСТРАЦИЯ И РАСШИФРОВКА ЭКГ С РИТМОГРАММОЙ</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="action5"
+                  id="id_action5"
+                />СУТОЧНОЕ (ХОЛТЕРОВСКОЕ) МОНИТОРИРОВАНИЕ ЭКГ</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="action6"
+                  id="id_action6"
+                />СУТОЧНОЕ МОНИТОРИРОВАНИЕ АРТЕРИАЛЬНОГО ДАВЛЕНИЯ</label
+              >
+            </li>
+            <li>
+              <input type="submit" />
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <section class="footer-left">
+          <a href="{% url 'main:home' %}"
+            ><svg class="footer-logo">
+              <use href="{% static 'img/icons.svg' %}#logo"></use>
+            </svg>
+          </a>
+
+          <ul class="footer-contacts-list">
+            <li class="footer-contacts-item">
+              <a href="https://goo.gl/maps/z97rL7C2HWEi3acW6"
+                >г. Днепр, ул. Костомаровская 8<br />(здание спорткомпллекса
+                "Динамо")</a
+              >
+            </li>
+
+            <li class="footer-contacts-item">
+              <a href="mailto:kaplan.cardio@gmail.com">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#email"></use>
+                </svg>
+                kaplan.cardio@gmail.com</a
+              >
+            </li>
+
+            <li class="footer-contacts-item">
+              <a href="tel:380678040363">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#phone"></use>
+                </svg>
+                +380 67 804 03 63</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="social-links">
+          <h2 class="social-links-title">Присоединяйтесь</h2>
+
+          <ul class="social-links-list">
+            <li class="social-links-item">
+              <a href="https://instagram.com/kaplan.cardio">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-links-item">
+              <a href="">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-links-item">
+              <a href="tg://resolve?domain=kaplan_cardio_bot">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#telegram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-links-item">
+              <a href="viber://chat?number=%2B380678040363">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#viber"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-links-item">
+              <a href="https://wa.me/380678040363">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2645.82341126304!2d35.03286330563295!3d48.45991764139793!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x151dd496c2b33ba0!2sKaplan%20Cardiology!5e0!3m2!1sru!2sua!4v1627409013805!5m2!1sru!2sua"
+            width="663"
+            height="210"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </section>
+      </div>
+    </footer>
+
+    <!-- Fixed button to register -->
+    <button class="fixed-button" type="button" data-modal-open-fixed>
+      Записаться
+    </button>
+
+    <script src="{% static 'js/modal.js' %}"></script>
+  </body>
 </html>

@@ -1,0 +1,79 @@
+/* Main */
+
+/* Hero */
+
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #2f303a;
+  background-image: url(../img/Hero-container.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero > .container {
+  text-align: center;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Welcome */
+
+.section.welcome {
+  padding: 80px 0 0 0;
+}
+
+.welcome p.main-text {
+  width: 856px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.welcome .important {
+  font-weight: bold;
+}
+
+/* Time */
+
+.time > .container {
+  width: 433px;
+  margin: 0 auto;
+  padding: 20px 46.5px;
+  border: 1px solid var(--main-text-color);
+}
+
+.time-lists-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.days-item,
+.time-item {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.days-item:not(:last-child),
+.time-item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.days-list svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}

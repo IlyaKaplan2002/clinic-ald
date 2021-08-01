@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Контакты{% endblock %}
+
+{% block imports %}
+        <link rel="stylesheet" href="{% static 'css/contacts.css' %}" />
+{% endblock %}
+{% block content %}
+    <main>
+      <section class="section contacts">
+        <div class="container">
+          <h1 class="section-title">Свяжитесь с нами</h1>
+
+          <ul class="min-contacts-list">
+            <li class="main-contacts-item">
+              <a href="mailto:kaplan.cardio@gmail.com"
+                >kaplan.cardio@gmail.com</a
+              >
+            </li>
+            <li class="main-contacts-item">
+              <a href="tel:380678040363">+380 67 804 03 63</a>
+            </li>
+            <li class="main-contacts-item">
+              <a href="https://goo.gl/maps/z97rL7C2HWEi3acW6"
+                >г. Днепр, ул. Костомаровская 8<br />(здание спорткомпллекса
+                "Динамо")</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section main-map">
+        <div class="container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2645.82341126304!2d35.03286330563295!3d48.45991764139793!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x151dd496c2b33ba0!2sKaplan%20Cardiology!5e0!3m2!1sru!2sua!4v1627409013805!5m2!1sru!2sua"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+{% endblock %}

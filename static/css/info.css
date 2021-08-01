@@ -1,0 +1,84 @@
+.info .section-title {
+  margin-bottom: 50px;
+  font-size: 48px;
+  text-transform: none;
+}
+
+.info-item {
+  border-right: 1px solid var(--main-text-color);
+  border-left: 1px solid var(--main-text-color);
+  border-top: 1px solid var(--main-text-color);
+  padding: 20px 100px;
+  width: 100%;
+}
+
+.info-item:last-child {
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.info-item.closed {
+  overflow: hidden;
+  height: 97.6px;
+}
+
+.info-item .section-title {
+  margin: 0;
+  padding: 0;
+}
+
+.info-item ul {
+  list-style: disc;
+  margin-left: 28px;
+}
+
+.info-item p,
+.info-item li {
+  font-size: 18px;
+}
+
+.info-item button {
+  background-color: #ffffff;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-text {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.opened .info-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.info-icon {
+  stroke: var(--main-text-color);
+  stroke-width: 2px;
+  transform: rotate(0deg);
+
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-icon:hover {
+  stroke: var(--hover-color);
+  cursor: pointer;
+}
+
+.opened .info-icon {
+  transform: rotate(45deg);
+}
+
+.opened .info-title {
+  margin-bottom: 25px;
+}
