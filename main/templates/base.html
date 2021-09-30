@@ -27,7 +27,7 @@
     <header class="page-header">
       <div class="container page-header-cont">
         <nav class="header-nav">
-          <a href="{% url 'main:home' %}">
+          <a href="{% url 'main:home' %}" class="header-logo-link">
             <svg class="header-logo">
               <use href="{% static 'img/icons.svg' %}#logo"></use>
             </svg>
@@ -35,7 +35,7 @@
 
           <!-- Adaptive -->
           <!-- Adaptive with icon -->
-          <ul class="topnav nav-list-adaptive" id="myTopnav">
+          <ul class="mobile-menu topnav nav-list-adaptive" id="myTopnav">
             <li class="nav-list-item">
               <a href="{% url 'main:home' %}">Главная</a>
             </li>
@@ -49,13 +49,19 @@
               <a href="{% url 'main:contacts' %}">Контакты</a>
             </li>
             <li>
-              <a class="icon" onclick="myFunction()">
+              <!-- <a class="icon" onclick="myFunction()">
                 <svg width="32" height="32">
                   <use href="{% static 'img/icons.svg' %}#menu"></use>
                 </svg>
-              </a>
+              </a> -->
             </li>
           </ul>
+
+          <a class="icon hamburger-menu" onclick="myFunction()">
+            <svg width="32" height="32">
+              <use href="{% static 'img/icons.svg' %}#menu"></use>
+            </svg>
+          </a>
 
           <ul class="nav-list">
             <li class="nav-list-item">
