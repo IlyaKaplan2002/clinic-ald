@@ -1,7 +1,7 @@
 @media screen and (max-width: 800px) {
   body {
     max-width: 800px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .container {
@@ -163,7 +163,7 @@
 
 /* ==========================MOBILE MENU============================== */
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
