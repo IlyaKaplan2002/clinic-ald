@@ -192,6 +192,10 @@
   right: 50px;
 }
 
+.mobile-menu a {
+  font-size: 20px;
+}
+
 @media (min-width: 801px) {
   .mobile-menu {
     display: none;
