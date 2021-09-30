@@ -186,6 +186,12 @@
   transform: translateX(0);
 }
 
+.mobile-menu-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
 @media (min-width: 801px) {
   .mobile-menu {
     display: none;
