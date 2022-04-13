@@ -37,16 +37,16 @@
           <!-- Adaptive with icon -->
           <ul class="mobile-menu topnav nav-list-adaptive" id="myTopnav">
             <li class="nav-list-item">
-              <a href="{% url 'main:home' %}">Главная</a>
+              <a href="{% url 'main:home' %}">Головна</a>
             </li>
             <li class="nav-list-item">
-              <a href="{% url 'main:services' %}">Услуги</a>
+              <a href="{% url 'main:services' %}">Послуги</a>
             </li>
             <li class="nav-list-item">
-              <a href="{% url 'main:info' %}">Информация</a>
+              <a href="{% url 'main:info' %}">Інформація</a>
             </li>
             <li class="nav-list-item">
-              <a href="{% url 'main:contacts' %}">Контакты</a>
+              <a href="{% url 'main:contacts' %}">Контакти</a>
             </li>
             <li>
               <a
@@ -68,16 +68,16 @@
 
           <ul class="nav-list">
             <li class="nav-list-item">
-              <a href="{% url 'main:home' %}">Главная</a>
+              <a href="{% url 'main:home' %}">Головна</a>
             </li>
             <li class="nav-list-item">
-              <a href="{% url 'main:services' %}">Услуги</a>
+              <a href="{% url 'main:services' %}">Послуги</a>
             </li>
             <li class="nav-list-item">
-              <a href="{% url 'main:info' %}">Информация</a>
+              <a href="{% url 'main:info' %}">Інформація</a>
             </li>
             <li class="nav-list-item">
-              <a href="{% url 'main:contacts' %}">Контакты</a>
+              <a href="{% url 'main:contacts' %}">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -159,21 +159,21 @@
 		</div>
 		</form> -->
 
-        <h2>Записаться на приём:</h2>
+        <h2>Зареєструватися на прийом:</h2>
 
         <form action="{% url 'main:appointment_checkout' %}" method="post">
           {% csrf_token %}
           <ul>
             <li>
-              <p class="main-text">ФИО:</p>
+              <p class="main-text">ФІО:</p>
               <input type="text" name="name" required id="id_name" />
             </li>
             <li>
-              <p class="main-text">Возраст:</p>
+              <p class="main-text">Вік:</p>
               <input type="text" name="age" required id="id_age" />
             </li>
             <li>
-              <p class="main-text">Телефон:</p>
+              <p class="main-text">Номер телефону:</p>
               <input type="text" name="phone" required id="id_phone" />
             </li>
 
@@ -183,7 +183,7 @@
 
           <ul id="id_destination">
             <li class="appointment-input">
-              <p class="main-text">Приём:</p>
+              <p class="main-text">Прийом:</p>
               <label>
                 <input
                   type="radio"
@@ -191,7 +191,7 @@
                   value="Первичный"
                   id="id_destination_0"
                 />
-                Первичный </label
+                Первинний </label
               ><br />
               <label>
                 <input
@@ -200,50 +200,56 @@
                   value="Повторный"
                   id="id_destination_1"
                 />
-                Вторичный
+                Повторний
               </label>
             </li>
             <li class="services-input">
               <p class="main-text">Услуга/услуги:</p>
               <label
-                ><input type="checkbox" name="action1" id="id_action1" />ПРИЁМ
-                ВРАЧА-КАРДИОЛОГА (С РЕГИСТРАЦИЕЙ И РАСШИФРОВКОЙ ЭКГ)</label
+                ><input
+                  type="checkbox"
+                  name="action1"
+                  id="id_action1"
+                />Первинний прийом лікаря - кардіолога (з реєстрацією і
+                розшифровкою ЕКГ)</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="action1"
+                  id="id_action1"
+                />Консультація лікаря - кардіолога на дому у пацієнта (з
+                реєстрацією і розшифровкою ЕКГ)</label
               >
               <label
                 ><input
                   type="checkbox"
                   name="action2"
                   id="id_action2"
-                />КОНСУЛЬТАЦИЯ ВРАЧА-КАРДИОЛОГА НА ДОМУ У ПАЦИЕНТА (С
-                РЕГИСТРАЦИЕЙ И РАСШИФРОВКОЙ ЭКГ)</label
+                />Повторний прийом лікаря - кардіолога (з реєстрацією і
+                розшифровкою ЕКГ)</label
               >
               <label
                 ><input
                   type="checkbox"
                   name="action3"
                   id="id_action3"
-                />РЕГИСТРАЦИЯ И РАСШИФРОВКА ЭКГ</label
+                />Реєстрація та розшифровка ЕКГ</label
               >
               <label
                 ><input
                   type="checkbox"
                   name="action4"
                   id="id_action4"
-                />РЕГИСТРАЦИЯ И РАСШИФРОВКА ЭКГ С РИТМОГРАММОЙ</label
+                />Реєстрація та розшифровка ЕКГ з ритмограмою</label
               >
               <label
-                ><input
-                  type="checkbox"
-                  name="action5"
-                  id="id_action5"
-                />СУТОЧНОЕ (ХОЛТЕРОВСКОЕ) МОНИТОРИРОВАНИЕ ЭКГ</label
+                ><input type="checkbox" name="action5" id="id_action5" />Добове
+                (холтерівське) моніторування ЕКГ</label
               >
               <label
-                ><input
-                  type="checkbox"
-                  name="action6"
-                  id="id_action6"
-                />СУТОЧНОЕ МОНИТОРИРОВАНИЕ АРТЕРИАЛЬНОГО ДАВЛЕНИЯ</label
+                ><input type="checkbox" name="action6" id="id_action6" />Добове
+                моніторування артеріального тиску</label
               >
             </li>
             <li>
@@ -266,7 +272,7 @@
           <ul class="footer-contacts-list">
             <li class="footer-contacts-item">
               <a href="https://goo.gl/maps/z97rL7C2HWEi3acW6"
-                >г. Днепр, ул. Костомаровская 8<br />(здание спорткомпллекса
+                >м. Дніпро, вул. Костомарівська 8<br />(будівля спорткомплексу
                 "Динамо")</a
               >
             </li>
@@ -292,7 +298,7 @@
         </section>
 
         <section class="social-links">
-          <h2 class="social-links-title">Присоединяйтесь</h2>
+          <h2 class="social-links-title">Долучайтесь</h2>
 
           <ul class="social-links-list">
             <li class="social-links-item">
@@ -352,7 +358,7 @@
 
     <!-- Fixed button to register -->
     <button class="fixed-button" type="button" data-modal-open-fixed>
-      Записаться
+      Зареєструватися
     </button>
 
     <script src="{% static 'js/modal.js' %}"></script>

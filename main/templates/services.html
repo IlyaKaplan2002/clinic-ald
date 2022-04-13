@@ -1,93 +1,88 @@
-{% extends "base.html" %}
-{% load static %}
-{% block title %}Услуги{% endblock %}
+{% extends "base.html" %} {% load static %} {% block title %}Услуги{% endblock
+%} {% block imports %}
+<link rel="stylesheet" href="{% static 'css/services.css' %}" />
+{% endblock %} {% block content %}
+<main>
+  <section class="section services">
+    <div class="container">
+      <div class="service-wrapper">
+        <h1 class="section-title">Наши услуги</h1>
 
-{% block imports %}
-        <link rel="stylesheet" href="{% static 'css/services.css' %}" />
-{% endblock %}
+        <div class="prices">
+          <!-- Adaptive -->
+          <ul class="services-list-adaptive">
+            <li class="services-item main-text">
+              Первинний прийом лікаря - кардіолога (з реєстрацією і розшифровкою
+              ЕКГ)<br />
+              750 грн
+            </li>
+            <li class="services-item main-text">
+              Повторний прийом лікаря - кардіолога (з реєстрацією і розшифровкою
+              ЕКГ)<br />
+              700 грн
+            </li>
+            <li class="services-item main-text">
+              Консультація лікаря - кардіолога на дому у пацієнта (з реєстрацією
+              і розшифровкою ЕКГ)<br />
+              2000 грн
+            </li>
+            <li class="services-item main-text">
+              Реєстрація та розшифровка ЕКГ<br />
+              300 грн
+            </li>
+            <li class="services-item main-text">
+              Реєстрація та розшифровка ЕКГ з ритмограмою<br />
+              350 грн
+            </li>
+            <li class="services-item main-text">
+              Добове (хол терівське) моніторування ЕКГ<br />
+              650 грн
+            </li>
+            <li class="services-item main-text">
+              Добове моніторування артеріального тиску<br />
+              550 грн
+            </li>
+          </ul>
 
-{% block content %}
-    <main>
-      <section class="section services">
-        <div class="container">
-          <div class="service-wrapper">
-            <h1 class="section-title">Наши услуги</h1>
+          <ul class="services-list">
+            <li class="services-item main-text">
+              Первинний прийом лікаря - кардіолога (з реєстрацією і розшифровкою
+              ЕКГ)
+            </li>
+            <li class="services-item main-text">
+              Повторний прийом лікаря - кардіолога (з реєстрацією і розшифровкою
+              ЕКГ)
+            </li>
+            <li class="services-item main-text">
+              Консультація лікаря - кардіолога на дому у пацієнта (з реєстрацією
+              і розшифровкою ЕКГ)
+            </li>
+            <li class="services-item main-text">
+              Реєстрація та розшифровка ЕКГ
+            </li>
+            <li class="services-item main-text">
+              Реєстрація та розшифровка ЕКГ з ритмограмою
+            </li>
+            <li class="services-item main-text">
+              Добове (хол терівське) моніторування ЕКГ
+            </li>
+            <li class="services-item main-text">
+              Добове моніторування артеріального тиску
+            </li>
+          </ul>
 
-            <div class="prices">
-              <!-- Adaptive -->
-              <ul class="services-list-adaptive">
-                <li class="services-item main-text">
-                  Первичный приём врача-кардиолога (с регистрацией и
-                  расшифровкой ЭКГ)<br />
-                  590 грн
-                </li>
-                <li class="services-item main-text">
-                  Повторный приём врача-кардиолога(с регистрацией и расшифровкой
-                  ЭКГ)<br />
-                  540 грн
-                </li>
-                <li class="services-item main-text">
-                  Консультация врача-кардиолога на дому у пациента (с
-                  регистрацией и расшифровкой ЭКГ)<br />
-                  990 грн
-                </li>
-                <li class="services-item main-text">
-                  Регистрация и расшифровка ЭКГ<br />
-                  210 грн
-                </li>
-                <li class="services-item main-text">
-                  Регистрация и расшифровка ЭКГ с ритмограммой<br />
-                  290 грн
-                </li>
-                <li class="services-item main-text">
-                  Суточное (холтеровское) мониторирование ЭКГ<br />
-                  550 грн
-                </li>
-                <li class="services-item main-text">
-                  Суточное мониторирование артериального давления<br />
-                  450 грн
-                </li>
-              </ul>
-
-              <ul class="services-list">
-                <li class="services-item main-text">
-                  Первичный приём врача-кардиолога (с регистрацией и
-                  расшифровкой ЭКГ)
-                </li>
-                <li class="services-item main-text">
-                  Повторный приём врача-кардиолога(с регистрацией и расшифровкой
-                  ЭКГ)
-                </li>
-                <li class="services-item main-text">
-                  Консультация врача-кардиолога на дому у пациента (с
-                  регистрацией и расшифровкой ЭКГ)
-                </li>
-                <li class="services-item main-text">
-                  Регистрация и расшифровка ЭКГ
-                </li>
-                <li class="services-item main-text">
-                  Регистрация и расшифровка ЭКГ с ритмограммой
-                </li>
-                <li class="services-item main-text">
-                  Суточное (холтеровское) мониторирование ЭКГ
-                </li>
-                <li class="services-item main-text">
-                  Суточное мониторирование артериального давления
-                </li>
-              </ul>
-
-              <ul class="prices-list">
-                <li class="services-item main-text">590 грн</li>
-                <li class="services-item main-text">540 грн</li>
-                <li class="services-item main-text">990 грн</li>
-                <li class="services-item main-text">220 грн</li>
-                <li class="services-item main-text">290 грн</li>
-                <li class="services-item main-text">550 грн</li>
-                <li class="services-item main-text">450 грн</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="prices-list">
+            <li class="services-item main-text">750 грн</li>
+            <li class="services-item main-text">700 грн</li>
+            <li class="services-item main-text">2000 грн</li>
+            <li class="services-item main-text">300 грн</li>
+            <li class="services-item main-text">350 грн</li>
+            <li class="services-item main-text">650 грн</li>
+            <li class="services-item main-text">550 грн</li>
+          </ul>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}

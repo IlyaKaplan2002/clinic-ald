@@ -1,101 +1,92 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block title %}Головна{% endblock
+%} {% block imports %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock %} {% block content %}
+<main>
+  <section class="section hero">
+    <div class="container">
+      <h1 class="hero-title">Кардіологічний кабінет<br />Каплана П. О.</h1>
 
-{% block title %}Главная{% endblock %}
+      <button type="button" data-modal-open>Записаться</button>
+    </div>
+  </section>
 
-{% block imports %}
-        <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-{% endblock %}
+  <section class="section welcome">
+    <div class="container">
+      <h2 class="section-title">Ласкаво просимо!</h2>
 
-{% block content %}
-    <main>
-      <section class="section hero">
-        <div class="container">
-          <h1 class="hero-title">
-            Кардиологический кабинет<br />доктора Каплана П. А.
-          </h1>
+      <p class="main-text">
+        Консультативний прийом веде лікар-кардіолог вищої категорії, доцент,
+        кандидат медичних наук, автор безлічі наукових праць з кардіології, член
+        Європейського товариства кардіологів
+        <span class="important"><br />Каплан Павло Олександрович.</span><br />
+        Досвід роботи: <span class="important">22 роки</span>
+      </p>
+    </div>
+  </section>
 
-          <button type="button" data-modal-open>Записаться</button>
-        </div>
-      </section>
+  <section class="section time">
+    <div class="container">
+      <h2 class="section-title">ЧАС РОБОТИ</h2>
 
-      <section class="section welcome">
-        <div class="container">
-          <h2 class="section-title">добро пожаловать!</h2>
+      <div class="time-lists-container">
+        <ul class="days-list">
+          <li class="days-item main-text">
+            <svg>
+              <use href="{% static 'img/icons.svg' %}#clock"></use>
+            </svg>
+            Понеділок
+          </li>
+          <li class="days-item main-text">
+            <svg>
+              <use href="{% static 'img/icons.svg' %}#clock"></use>
+            </svg>
+            Вівторок
+          </li>
+          <li class="days-item main-text">
+            <svg>
+              <use href="{% static 'img/icons.svg' %}#clock"></use>
+            </svg>
+            Середа
+          </li>
+          <li class="days-item main-text">
+            <svg>
+              <use href="{% static 'img/icons.svg' %}#clock"></use>
+            </svg>
+            Четвер
+          </li>
+          <li class="days-item main-text">
+            <svg>
+              <use href="{% static 'img/icons.svg' %}#clock"></use>
+            </svg>
+            П'ятниця
+          </li>
+          <li class="days-item main-text">
+            <svg>
+              <use href="{% static 'img/icons.svg' %}#clock"></use>
+            </svg>
+            Субота
+          </li>
+          <li class="days-item main-text">
+            <svg>
+              <use href="{% static 'img/icons.svg' %}#clock"></use>
+            </svg>
+            Неділя
+          </li>
+        </ul>
 
-          <p class="main-text">
-            Консультативный прием ведет врач-кардиолог высшей категории, доцент,
-            кандидат медицинских наук, автор множества научных работ по
-            кардиологии, член Европейского общества кардиологов
-            <span class="important"><br />Каплан Павел Александрович.</span
-            ><br />
-            Опыт работы: <span class="important">22 года</span>
-          </p>
-        </div>
-      </section>
-
-      <section class="section time">
-        <div class="container">
-          <h2 class="section-title">ВРЕМЯ РАБОТЫ</h2>
-
-          <div class="time-lists-container">
-            <ul class="days-list">
-              <li class="days-item main-text">
-                <svg>
-                  <use href="{% static 'img/icons.svg' %}#clock"></use>
-                </svg>
-                Понедельник
-              </li>
-              <li class="days-item main-text">
-                <svg>
-                  <use href="{% static 'img/icons.svg' %}#clock"></use>
-                </svg>
-                Вторник
-              </li>
-              <li class="days-item main-text">
-                <svg>
-                  <use href="{% static 'img/icons.svg' %}#clock"></use>
-                </svg>
-                Среда
-              </li>
-              <li class="days-item main-text">
-                <svg>
-                  <use href="{% static 'img/icons.svg' %}#clock"></use>
-                </svg>
-                Четверг
-              </li>
-              <li class="days-item main-text">
-                <svg>
-                  <use href="{% static 'img/icons.svg' %}#clock"></use>
-                </svg>
-                Пятница
-              </li>
-              <li class="days-item main-text">
-                <svg>
-                  <use href="{% static 'img/icons.svg' %}#clock"></use>
-                </svg>
-                Суббота
-              </li>
-              <li class="days-item main-text">
-                <svg>
-                  <use href="{% static 'img/icons.svg' %}#clock"></use>
-                </svg>
-                Воскресенье
-              </li>
-            </ul>
-
-            <ul class="time-list">
-              <li class="time-item main-text">09:00 - 19:00</li>
-              <li class="time-item main-text">09:00 - 19:00</li>
-              <li class="time-item main-text">09:00 - 19:00</li>
-              <li class="time-item main-text">09:00 - 19:00</li>
-              <li class="time-item main-text">09:00 - 19:00</li>
-              <li class="time-item main-text">10:00 - 16:00</li>
-              <li class="time-item main-text">Выходной</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
+        <ul class="time-list">
+          <li class="time-item main-text">09:00 - 19:00</li>
+          <li class="time-item main-text">09:00 - 19:00</li>
+          <li class="time-item main-text">09:00 - 19:00</li>
+          <li class="time-item main-text">09:00 - 19:00</li>
+          <li class="time-item main-text">09:00 - 19:00</li>
+          <li class="time-item main-text">10:00 - 16:00</li>
+          <li class="time-item main-text">Вихідний</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
 
 {% endblock %}
